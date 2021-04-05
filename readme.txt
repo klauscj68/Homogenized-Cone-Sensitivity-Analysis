@@ -1,4 +1,8 @@
-This repository contains the code needed to perform our finite element and Sobol sensitivity analysis for cone photoreceptors in bright light. We highlight the following for making use of the code as in our paper.
+This repository contains the code needed to perform our finite element and Sobol sensitivity analysis for cone photoreceptors in bright light. 
+
+v1.0 DOI:10.5281/zenodo.4666495
+
+We highlight the following for making use of the code as in our paper.
 
 1.) main.m
 This is the main driver script for most of the modeling tasks. These include: the activation signaling cascade on discs (Act), the conversion of E* as a surface quantity to a volumic one (Evol), the 2nd messenger diffusion of cGMP and Ca2+ in the cytosol. To run basic flash simulations, these three cases should be run in sequence. In addition to these basic cases, main.m can also perform several sensitivity and fitting tasks: gradient based local sensitivity about a choice of parameters (SA_pd), Monte Carlo simulation for Sobol, and the MCMC fitting of experimental flash responses (RanW). For Sobol analysis, supercomputing resources were required for adequate numbers of simulation for Monte Carlo and processing.
