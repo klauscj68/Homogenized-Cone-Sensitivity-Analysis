@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Worksheet>
+<Version major="2018" minor="2"/>
+<Label-Scheme value="2" prefix=""/>
+<View-Properties presentation="false" autoexpanding_sections="true" UserProfileName="Maple Default Profile" NumericFormat-ApplyInteger="true" NumericFormat-ApplyRational="true" NumericFormat-ApplyExponent="false" editable="true">
+</View-Properties>
+<MapleNet-Properties prettyprint="3" warnlevel="3" preplot="" helpbrowser="standard" displayprecision="-1" echo="1" unitattributes="&quot;fontweight&quot; = &quot;bold&quot;" imaginaryunit="I" longdelim="true" elisiontermsthreshold="10000" elisiondigitsafter="100" elisiondigitsbefore="100" plotdevice="inline" errorbreak="1" plotoptions="" plotdriver="opengl" quiet="false" elisiontermsbefore="100" elisiontermsafter="100" screenwidth="79" indentamount="4" plotoutput="terminal" screenpixelheight="1080" rtablesize="10" useclientjvm="true" labelwidth="20" postplot="" typesetting="extended" ansi="false" ansicolor="[]" elisiondigitsthreshold="10000" showassumed="1" ansilprint="false" errorcursor="false" labelling="true" screenheight="25" prompt="&gt; " verboseproc="1" latexwidth="8.0" ShowLabels="true"/>
+<Styles>
+<Font name="Heading 1" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Warning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Line Printed Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 2" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="16" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Inert Output" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[144,144,144]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 3" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="14" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Diagnostic" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[40,120,40]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 1" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[120,0,14]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 2" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 3" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 5" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Header and Footer" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkError" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Atomic Variable" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[175,0,175]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkWarning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Dictionary Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[147,0,15]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="2D Math" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Bullet Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Plot" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="List Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Dash Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Input" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Error" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Normal" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Caption Reference" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Code" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input Placeholder" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[200,0,200]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="true"/>
+<Font name="Equation Label" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Author" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,128,128]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Caption Text" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Layout name="Heading 1" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="4" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Warning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 4" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Line Printed Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 2" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="2" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Output" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.3" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 3" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Diagnostic" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Ordered List 1" alignment="left" bullet="numeric" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Text Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="newline" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Ordered List 2" alignment="left" bullet="alphabetic" firstindent="0" leftmargin="36" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 3" alignment="left" bullet="roman" firstindent="0" leftmargin="72" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 4" alignment="left" bullet="ALPHABETIC" firstindent="0" leftmargin="108" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 5" alignment="left" bullet="ROMAN" firstindent="0" leftmargin="144" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Annotation Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkError" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkWarning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Bullet Item" alignment="left" bullet="dot" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Plot" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="List Item" alignment="left" bullet="indent" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Dash Item" alignment="left" bullet="dash" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Error" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Normal" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Author" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="8" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Pencil-style name="Pencil 1" pen-color="[0,0,0]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 2" pen-color="[0,0,255]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 3" pen-color="[0,0,0]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 4" pen-color="[0,0,255]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 5" pen-color="[255,0,0]" pen-height="5.0" pen-width="5.0" pen-opacity="1.0"/>
+<Highlighter-style name="Highlighter 5" pen-color="[255,255,0]" pen-height="48.0" pen-width="48.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 3" pen-color="[51,255,0]" pen-height="24.0" pen-width="24.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 4" pen-color="[0,255,255]" pen-height="32.0" pen-width="32.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 1" pen-color="[255,153,255]" pen-height="12.0" pen-width="8.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 2" pen-color="[255,204,0]" pen-height="14.0" pen-width="14.0" pen-opacity="0.8"/>
+</Styles>
+<Startup-Code startupcode=""/>
+<Task-table>
+    <Task-category name="&lt;default&gt;"/>
+</Task-table>
+<Task/>
+<Group labelreference="L1" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Compute the terms needed for volume local assembly of cone mass and stiffness matrices </Text-field><Text-field style="Text" layout="Normal">but written over Lag coordinates of cylinder</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">with('LinearAlgebra'):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">with('CodeGeneration'):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L15" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Prep the transformation which takes you from Lagrangian cylindrical coordinates</Text-field><Text-field style="Text" layout="Normal">to Eulerian cone coordinates</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L16" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">lambda := R_b/R_t - (R_b - R_t)/(R_t*H)*z:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">F := Matrix(3,1):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">F[1,1] := lambda*x:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">F[2,1] := lambda*y:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">F[3,1] := z:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DF := Matrix(3,3):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Vars := &lt;x|y|z&gt;:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Vars := convert(Vars,Matrix):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for j from 1 to 3 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    DF[1..3,j]:=diff(F,Vars[1,j]):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Jvol := simplify(Determinant(DF)):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L3" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Elements are defined by 3 R^2 coordinates for triangle and 2 R coordinates for z</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L4" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">P := Matrix(2,3):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 2 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    for j from 1 to 3 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">        P[i,j] := cat(cat('p',i),j):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(P):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Z := Matrix(2,1):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Z[1,1] := z1: </Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Z[2,1] := z2:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(Z):</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkqbWNvbXBsZXRlRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliR0YnNiQtSShtZmVuY2VkR0YkNigtSSVtcm93R0YkNiYtSSdtdGFibGVHRiQ2Ni1JJG10ckdGJDYoLUkkbXRkR0YkNigtSSNtaUdGJDYlUSRwMTFGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRicvJSlyb3dhbGlnbkdRIUYnLyUsY29sdW1uYWxpZ25HRkYvJStncm91cGFsaWduR0ZGLyUocm93c3BhbkdRIjFGJy8lK2NvbHVtbnNwYW5HRk0tRjg2KC1GOzYlUSRwMTJGJ0Y+RkFGREZHRklGS0ZOLUY4NigtRjs2JVEkcDEzRidGPkZBRkRGR0ZJRktGTkZERkdGSS1GNTYoLUY4NigtRjs2JVEkcDIxRidGPkZBRkRGR0ZJRktGTi1GODYoLUY7NiVRJHAyMkYnRj5GQUZERkdGSUZLRk4tRjg2KC1GOzYlUSRwMjNGJ0Y+RkFGREZHRklGS0ZORkRGR0ZJLyUmYWxpZ25HUSVheGlzRicvRkVRKWJhc2VsaW5lRicvRkhRJ2NlbnRlckYnL0ZKUSd8ZnJsZWZ0fGhyRicvJS9hbGlnbm1lbnRzY29wZUdGQC8lLGNvbHVtbndpZHRoR1ElYXV0b0YnLyUmd2lkdGhHRmJwLyUrcm93c3BhY2luZ0dRJjEuMGV4RicvJS5jb2x1bW5zcGFjaW5nR1EmMC44ZW1GJy8lKXJvd2xpbmVzR1Elbm9uZUYnLyUsY29sdW1ubGluZXNHRl1xLyUmZnJhbWVHRl1xLyUtZnJhbWVzcGFjaW5nR1EsMC40ZW1+MC41ZXhGJy8lKmVxdWFscm93c0dRJmZhbHNlRicvJS1lcXVhbGNvbHVtbnNHRmdxLyUtZGlzcGxheXN0eWxlR0ZncS8lJXNpZGVHUSZyaWdodEYnLyUwbWlubGFiZWxzcGFjaW5nR0ZqcC8lK2ZvcmVncm91bmRHUShbMCwwLDBdRicvJSlyZWFkb25seUdGZ3EvRkJRJ25vcm1hbEYnRmZyL0krbXNlbWFudGljc0dGJFEnTWF0cml4RicvJSVvcGVuR1EnJmxzcWI7RicvJSZjbG9zZUdRJyZyc3FiO0YnRmhyLUYsNigtRi82Ji1GMjY2LUY1NigtRjg2KC1GOzYnRj1GPkZhckZkckZBRkRGR0ZJRktGTi1GODYoLUY7NidGVEY+RmFyRmRyRkFGREZHRklGS0ZOLUY4NigtRjs2J0ZZRj5GYXJGZHJGQUZERkdGSUZLRk5GREZHRkktRjU2KC1GODYoLUY7NidGam5GPkZhckZkckZBRkRGR0ZJRktGTi1GODYoLUY7NidGX29GPkZhckZkckZBRkRGR0ZJRktGTi1GODYoLUY7NidGZG9GPkZhckZkckZBRkRGR0ZJRktGTkZERkdGSUZlb0Zob0Zqb0ZccEZecEZgcEZjcEZlcEZocEZbcUZecUZgcUZicUZlcUZocUZqcUZcckZfckZhckZkckZmckZhckZkckZmci9GXHNRIltGJy9GX3NRIl1GJw==">LV9JLFR5cGVzZXR0aW5nRzYkJSpwcm90ZWN0ZWRHSShfc3lzbGliRzYiSSxtcHJpbnRzbGFzaEdGKDYkNyNYLEkpYW55dGhpbmdHRiZGKEYoW2dsISIlISEhIyciIyIkLUkjbWlHNiRGJi9JK21vZHVsZW5hbWVHRihGJDYjUSRwMTFGKC1GLzYjUSRwMjFGKC1GLzYjUSRwMTJGKC1GLzYjUSRwMjJGKC1GLzYjUSRwMTNGKC1GLzYjUSRwMjNGKDcjLUknTWF0cml4R0YlNiMvSSQlaWRHRigiNUUsJik0LCdwdVklPQ==</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkqbWNvbXBsZXRlRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliR0YnNiQtSShtZmVuY2VkR0YkNigtSSVtcm93R0YkNiYtSSdtdGFibGVHRiQ2Ni1JJG10ckdGJDYmLUkkbXRkR0YkNigtSSNtaUdGJDYlUSN6MUYnLyUnaXRhbGljR1EldHJ1ZUYnLyUsbWF0aHZhcmlhbnRHUSdpdGFsaWNGJy8lKXJvd2FsaWduR1EhRicvJSxjb2x1bW5hbGlnbkdGRi8lK2dyb3VwYWxpZ25HRkYvJShyb3dzcGFuR1EiMUYnLyUrY29sdW1uc3BhbkdGTUZERkdGSS1GNTYmLUY4NigtRjs2JVEjejJGJ0Y+RkFGREZHRklGS0ZORkRGR0ZJLyUmYWxpZ25HUSVheGlzRicvRkVRKWJhc2VsaW5lRicvRkhRJ2NlbnRlckYnL0ZKUSd8ZnJsZWZ0fGhyRicvJS9hbGlnbm1lbnRzY29wZUdGQC8lLGNvbHVtbndpZHRoR1ElYXV0b0YnLyUmd2lkdGhHRl5vLyUrcm93c3BhY2luZ0dRJjEuMGV4RicvJS5jb2x1bW5zcGFjaW5nR1EmMC44ZW1GJy8lKXJvd2xpbmVzR1Elbm9uZUYnLyUsY29sdW1ubGluZXNHRmlvLyUmZnJhbWVHRmlvLyUtZnJhbWVzcGFjaW5nR1EsMC40ZW1+MC41ZXhGJy8lKmVxdWFscm93c0dRJmZhbHNlRicvJS1lcXVhbGNvbHVtbnNHRmNwLyUtZGlzcGxheXN0eWxlR0ZjcC8lJXNpZGVHUSZyaWdodEYnLyUwbWlubGFiZWxzcGFjaW5nR0Zmby8lK2ZvcmVncm91bmRHUShbMCwwLDBdRicvJSlyZWFkb25seUdGY3AvRkJRJ25vcm1hbEYnRmJxL0krbXNlbWFudGljc0dGJFEnTWF0cml4RicvJSVvcGVuR1EnJmxzcWI7RicvJSZjbG9zZUdRJyZyc3FiO0YnRmRxLUYsNigtRi82Ji1GMjY2LUY1NiYtRjg2KC1GOzYnRj1GPkZdcUZgcUZBRkRGR0ZJRktGTkZERkdGSS1GNTYmLUY4NigtRjs2J0ZWRj5GXXFGYHFGQUZERkdGSUZLRk5GREZHRklGV0ZaRmZuRmhuRmpuRlxvRl9vRmFvRmRvRmdvRmpvRlxwRl5wRmFwRmRwRmZwRmhwRltxRl1xRmBxRmJxRl1xRmBxRmJxL0ZocVEiW0YnL0ZbclEiXUYn">LV9JLFR5cGVzZXR0aW5nRzYkJSpwcm90ZWN0ZWRHSShfc3lzbGliRzYiSSxtcHJpbnRzbGFzaEdGKDYkNyNYLEkpYW55dGhpbmdHRiZGKEYoW2dsISIlISEhIyMiIyIiLUkjbWlHNiRGJi9JK21vZHVsZW5hbWVHRihGJDYjUSN6MUYoLUYvNiNRI3oyRig3Iy1JJ01hdHJpeEdGJTYjL0kkJWlkR0YoIjV5XSIpNCwncHVZJT0=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L5" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">%%%%%
+Define the volume shape functions:</Text-field><Text-field style="Text" layout="Normal">%%%%%
+In Lagrangian cylindrical coordinates, shape functions are tensor product of affine interpolants</Text-field><Text-field style="Text" layout="Normal">for R^2 horizontal variables with affine interpolant for R^1 vertical variable  </Text-field><Text-field style="Text" layout="Normal"></Text-field><Text-field style="Text" layout="Normal">These take 1 at their given node and 0 at all other nodes. Order of shape functions matches order </Text-field><Text-field style="Text" layout="Normal">of columns. That is that is point at which it takes the value 1.</Text-field><Text-field style="Text" layout="Normal"></Text-field><Text-field style="Text" layout="Normal">Repeat this process for other shape functions</Text-field>
+</Input>
+</Group>
+<Group labelreference="L11" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Coordinates of Lag xy-shape function are ax + by + c = [x y 1]*[a;b;c]</Text-field><Text-field style="Text" layout="Normal">Augmented so that you take right values at various nodes</Text-field><Text-field style="Text" layout="Normal">[1;0;0] = [x1 y1 1;x2 y2 1; x3 y3 1]*[sxy1a;sxy1b;sxy1c]</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L8" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">M := Transpose(&lt;&lt;P[1,1],P[2,1],1&gt; | &lt;P[1,2],P[2,2],1&gt; | &lt;P[1,3],P[2,3],1&gt;&gt;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s1xy_c := LinearSolve(M,&lt;1,0,0&gt;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s2xy_c := LinearSolve(M,&lt;0,1,0&gt;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s3xy_c := LinearSolve(M,&lt;0,0,1&gt;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Vars := &lt;x | y | 1&gt;:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s1xy := Vars.s1xy_c:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s2xy := Vars.s2xy_c:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s3xy := Vars.s3xy_c:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L58" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Check shape functions evaluate like expect</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L59" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(x = p11, y = p21, s1xy))): </Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(x = p12, y = p22, s1xy))):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(x = p13, y = p23, s1xy))):</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMUYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIi</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+</Group>
+<Group hide-input="false" labelreference="L60" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(x = p11, y = p21, s2xy))): </Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(x = p12, y = p22, s2xy))):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(x = p13, y = p23, s2xy))):</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMUYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIi</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+</Group>
+<Group hide-input="false" labelreference="L61" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(x = p11, y = p21, s3xy))): </Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(x = p12, y = p22, s3xy))):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(x = p13, y = p23, s3xy))):</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMUYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIi</Equation></Text-field>
+</Output>
+</Group>
+<Group hide-input="false" labelreference="L9" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Coordinates of z-shape functions are</Text-field><Text-field style="Text" layout="Normal">az + b = [z 1]*[a;b]</Text-field><Text-field style="Text" layout="Normal">Augmented so that you take right values at various nodes</Text-field><Text-field style="Text" layout="Normal">[1;0] = [z1 1;z2 1]*[s1za;s2za]</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L10" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">M := &lt; &lt;z1,z2&gt;|&lt;1,1&gt; &gt;:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s1z_c := LinearSolve(M,&lt;1,0&gt;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s2z_c := LinearSolve(M,&lt;0,1&gt;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Vars := &lt;z | 1&gt;:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s1z := Vars.s1z_c:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s2z := Vars.s2z_c:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L62" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Check shape functions evaluate like expect</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L63" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(z = z1, s1z))):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(z = z2, s1z))):</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMUYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIi</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+</Group>
+<Group hide-input="false" labelreference="L64" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(z = z1, s2z))):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(simplify(subs(z = z2, s2z))):</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMUYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIi</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L12" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">%%%%%
+Construct the 6 3D volume shape functions defined over Lagrangian element</Text-field><Text-field style="Text" layout="Normal">%%%%%
+Indexed in the order of columns of P then from bottom to top</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L13" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s1_lag := s1xy*s1z:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s2_lag := s2xy*s1z:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s3_lag := s3xy*s1z:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s4_lag := s1xy*s2z:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s5_lag := s2xy*s2z:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s6_lag := s3xy*s2z:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L23" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Group them in a single array for looping</Text-field>
+</Input>
+</Group>
+<Group labelreference="L24" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_lag := Matrix(6,1):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_lag[1,1] := s1_lag:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_lag[2,1] := s2_lag:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_lag[3,1] := s3_lag:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_lag[4,1] := s4_lag:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_lag[5,1] := s5_lag:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_lag[6,1] := s6_lag:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L18" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">%%%%%
+Construct 6 3D volume shape functions defined over Eulerian element</Text-field><Text-field style="Text" layout="Normal">%%%%%
+<Font encoding="UTF-8">Formula : s\134circ (F^-1)</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L19" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s1_eul := subs(x = 1/lambda*x, y = 1/lambda*y,
+               s1_lag):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s2_eul := subs(x = 1/lambda*x, y = 1/lambda*y,
+               s2_lag):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s3_eul := subs(x = 1/lambda*x, y = 1/lambda*y,
+               s3_lag):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s4_eul := subs(x = 1/lambda*x, y = 1/lambda*y,
+               s4_lag):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s5_eul := subs(x = 1/lambda*x, y = 1/lambda*y,
+               s5_lag):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s6_eul := subs(x = 1/lambda*x, y = 1/lambda*y,
+               s6_lag):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L25" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Group them in an array for looping</Text-field>
+</Input>
+</Group>
+<Group labelreference="L26" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_eul := Matrix(6,1):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_eul[1,1] := simplify(s1_eul):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_eul[2,1] := simplify(s2_eul):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_eul[3,1] := simplify(s3_eul):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_eul[4,1] := simplify(s4_eul):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_eul[5,1] := simplify(s5_eul):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Shape_eul[6,1] := simplify(s6_eul):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L20" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Compute derivatives of shape functions over Eulerian coordinates</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L21" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Vars := &lt;x | y | z&gt;:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Vars := convert(Vars,Matrix):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_s1_eul := Matrix(1,3):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for j from 1 to 3 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    nabla_s1_eul[1,j] := simplify(diff(s1_eul,Vars[1,j])):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_s2_eul := Matrix(1,3):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for j from 1 to 3 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    nabla_s2_eul[1,j] := simplify(diff(s2_eul,Vars[1,j])):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_s3_eul := Matrix(1,3):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for j from 1 to 3 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    nabla_s3_eul[1,j] := simplify(diff(s3_eul,Vars[1,j])):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_s4_eul := Matrix(1,3):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for j from 1 to 3 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    nabla_s4_eul[1,j] := simplify(diff(s4_eul,Vars[1,j])):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_s5_eul := Matrix(1,3):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for j from 1 to 3 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    nabla_s5_eul[1,j] := simplify(diff(s5_eul,Vars[1,j])):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_s6_eul := Matrix(1,3):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for j from 1 to 3 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    nabla_s6_eul[1,j] := simplify(diff(s6_eul,Vars[1,j])):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L27" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Group derivatives in an array for looping</Text-field>
+</Input>
+</Group>
+<Group labelreference="L28" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_Shape_eul := Matrix(6,3):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_Shape_eul[1,1..3] := nabla_s1_eul:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_Shape_eul[2,1..3] := nabla_s2_eul:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_Shape_eul[3,1..3] := nabla_s3_eul:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_Shape_eul[4,1..3] := nabla_s4_eul:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_Shape_eul[5,1..3] := nabla_s5_eul:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_Shape_eul[6,1..3] := nabla_s6_eul:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L14" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">%%%%%
+Run local element assembly for Mvol</Text-field><Text-field style="Text" layout="Normal">%%%%%
+In order to give Maple definite integration ranges, we must pull our prism_lag back to </Text-field><Text-field style="Text" layout="Normal">the standard right prism. preMvol means the integrand over standard element before</Text-field><Text-field style="Text" layout="Normal">integrating</Text-field>
+</Input>
+</Group>
+<Group labelreference="L30" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Horizontal variables</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L17" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">b := &lt;1 - b1 - b2, b1, b2 &gt;:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">b := convert(b,Matrix):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Bary := P.b:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DBary := Matrix(2,2):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for j from 1 to 2 do
+    DBary[1..2,j] := diff(Bary,b[j+1,1]):
+od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Jbary := simplify(Determinant(DBary)):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L31" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Vertical variable</Text-field>
+</Input>
+</Group>
+<Group labelreference="L32" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Zed := (1-s)*Z[1,1] + s*Z[2,1]:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Jzed := diff(Zed,s):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L22" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">preMvol := Matrix(6,6):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 6 do
+    for j from 1 to 6 do
+          preMvol[i,j] := Shape_lag[i,1]*Shape_lag[j,1]*Jvol*Jbary*Jzed:
+          preMvol[i,j] := subs(x = Bary[1,1], y = Bary[2,1], z = Zed, 
+                               preMvol[i,j]):
+          preMvol[i,j] := simplify(preMvol[i,j]):
+    od:
+od:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L29" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Mvol := Matrix(6,6):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 6 do
+    for j from 1 to 6 do
+        Mvol[i,j] := int(preMvol[i,j],[b2=0..1-b1]):
+        Mvol[i,j] := int(Mvol[i,j],[b1=0..1, s=0..1]):
+        Mvol[i,j] := simplify(Mvol[i,j]):
+    od:
+od:</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L34" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">%%%%%</Text-field><Text-field style="Text" layout="Normal">Run local element assembly for Kvol</Text-field><Text-field style="Text" layout="Normal">%%%%%</Text-field><Text-field style="Text" layout="Normal">Remember that only the x-y derivatives enter into this operator</Text-field>
+</Input>
+</Group>
+<Group labelreference="L44" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">preKvol := Matrix(6,6):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 6 do
+    for j from 1 to 6 do
+        preKvol[i,j] := (nabla_Shape_eul[i,1..2].Transpose(nabla_Shape_eul[j,1..2]))*
+                        Jvol*Jbary*Jzed:
+        preKvol[i,j] := subs(x = Bary[1,1], y = Bary[2,1], z = Zed,
+                             preKvol[i,j]):
+        preKvol[i,j] := simplify(preKvol[i,j]):
+    od:
+od:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L45" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Kvol := Matrix(6,6):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 6 do
+    for j from 1 to 6 do
+        Kvol[i,j] := int(preKvol[i,j],[b2=0..1-b1]):
+        Kvol[i,j] := int(Kvol[i,j],[b1=0..1, s=0..1]):
+        Kvol[i,j] := simplify(Kvol[i,j]):
+    od:
+od:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L47" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Write these terms into Matlab code written to text files</Text-field>
+</Input>
+</Group>
+<Group labelreference="L57" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L52" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">writeto(&quot;vol_local.txt&quot;):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L56" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Jbary,resultname='Jbary'):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mvol,resultname='Mvol'):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kvol,resultname='Kvol'):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L48" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">writeto(terminal):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L65" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Worksheet>

@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Worksheet>
+<Version major="2018" minor="2"/>
+<Label-Scheme value="2" prefix=""/>
+<View-Properties presentation="true" autoexpanding_sections="true" UserProfileName="Maple Default Profile" NumericFormat-ApplyInteger="true" NumericFormat-ApplyRational="true" NumericFormat-ApplyExponent="false" editable="true">
+</View-Properties>
+<MapleNet-Properties prettyprint="3" warnlevel="3" preplot="" helpbrowser="standard" displayprecision="-1" echo="1" unitattributes="&quot;fontweight&quot; = &quot;bold&quot;" imaginaryunit="I" longdelim="true" elisiontermsthreshold="10000" elisiondigitsafter="100" elisiondigitsbefore="100" plotdevice="inline" errorbreak="1" plotoptions="" plotdriver="opengl" quiet="false" elisiontermsbefore="100" elisiontermsafter="100" screenwidth="79" indentamount="4" plotoutput="terminal" screenpixelheight="1080" rtablesize="10" useclientjvm="true" labelwidth="20" postplot="" typesetting="extended" ansi="false" ansicolor="[]" elisiondigitsthreshold="10000" showassumed="1" ansilprint="false" errorcursor="false" labelling="true" screenheight="25" prompt="&gt; " verboseproc="1" latexwidth="8.0" ShowLabels="true"/>
+<Styles>
+<Font name="Heading 1" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Warning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Line Printed Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 2" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="16" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Inert Output" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[144,144,144]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 3" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="14" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Diagnostic" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[40,120,40]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 1" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[120,0,14]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 2" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 3" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 5" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Header and Footer" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkError" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Atomic Variable" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[175,0,175]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkWarning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Dictionary Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[147,0,15]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="2D Math" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Bullet Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Plot" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="List Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Dash Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Input" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Error" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Normal" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Caption Reference" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Code" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input Placeholder" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[200,0,200]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="true"/>
+<Font name="Equation Label" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Author" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,128,128]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Caption Text" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Layout name="Heading 1" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="4" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Warning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 4" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Line Printed Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 2" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="2" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Output" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.3" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 3" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Diagnostic" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Ordered List 1" alignment="left" bullet="numeric" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Text Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="newline" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Ordered List 2" alignment="left" bullet="alphabetic" firstindent="0" leftmargin="36" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 3" alignment="left" bullet="roman" firstindent="0" leftmargin="72" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 4" alignment="left" bullet="ALPHABETIC" firstindent="0" leftmargin="108" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 5" alignment="left" bullet="ROMAN" firstindent="0" leftmargin="144" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Annotation Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkError" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkWarning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Bullet Item" alignment="left" bullet="dot" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Plot" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="List Item" alignment="left" bullet="indent" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Dash Item" alignment="left" bullet="dash" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Error" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Normal" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Author" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="8" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Pencil-style name="Pencil 1" pen-color="[0,0,0]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 2" pen-color="[0,0,255]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 3" pen-color="[0,0,0]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 4" pen-color="[0,0,255]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 5" pen-color="[255,0,0]" pen-height="5.0" pen-width="5.0" pen-opacity="1.0"/>
+<Highlighter-style name="Highlighter 5" pen-color="[255,255,0]" pen-height="48.0" pen-width="48.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 3" pen-color="[51,255,0]" pen-height="24.0" pen-width="24.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 4" pen-color="[0,255,255]" pen-height="32.0" pen-width="32.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 1" pen-color="[255,153,255]" pen-height="12.0" pen-width="8.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 2" pen-color="[255,204,0]" pen-height="14.0" pen-width="14.0" pen-opacity="0.8"/>
+</Styles>
+<Startup-Code startupcode=""/>
+<Task-table>
+    <Task-category name="&lt;default&gt;"/>
+</Task-table>
+<Task/><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Compute the terms needed for boundary local assembly of cone mass and stiffness matrices</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L67" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">but written over Lag coordinates of cylinder
+
+Note: 'whattype' command can be used to check the type output when Maple doesn't like how </Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">you're multiplying and adding vectors</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L94" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">restart:</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L2" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">with('LinearAlgebra'):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">with('CodeGeneration'):</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L95" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Add in the assumptions on variables used</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L96" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">assume(Z2 - Z1 &gt; 0, Z1 &gt;= 0, Z2 &gt;= 0):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">assume(R_b - R_t &gt; 0, R_b &gt;= 0, R_t &gt;= 0):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">assume(H &gt; 0):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">additionally(H - Z1 &gt; 0, H - Z2 &gt;= 0):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L19" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Prep the transformation which takes you from Lagrangian cylindrical coordinates</Text-field><Text-field style="Text" layout="Normal">to Eulerian cone coordinates</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L18" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">lambda := R_b/R_t - (R_b - R_t)/(R_t*H)*z:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">F := Matrix(3,1):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">F[1,1] := lambda*x:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">F[2,1] := lambda*y:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">F[3,1] := z:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DF := Matrix(3,3):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Vars := &lt;x|y|z&gt;:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Vars := convert(Vars,Matrix):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for j from 1 to 3 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    DF[1..3,j]:=diff(F,Vars[1,j]):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L7" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Elements are defined by 2 R^2 coordinates for edge and 2 R^1 coordinates for z</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L20" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">P := Matrix(2,2):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 2 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    for j from 1 to 2 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">        P[i,j] := cat(cat('p',i),j):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(P):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Z := Matrix(2,1):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Z[1,1] := Z1: </Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Z[2,1] := Z2:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(Z):</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkqbWNvbXBsZXRlRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliR0YnNiQtSShtZmVuY2VkR0YkNigtSSVtcm93R0YkNiYtSSdtdGFibGVHRiQ2Ni1JJG10ckdGJDYnLUkkbXRkR0YkNigtSSNtaUdGJDYlUSRwMTFGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRicvJSlyb3dhbGlnbkdRIUYnLyUsY29sdW1uYWxpZ25HRkYvJStncm91cGFsaWduR0ZGLyUocm93c3BhbkdRIjFGJy8lK2NvbHVtbnNwYW5HRk0tRjg2KC1GOzYlUSRwMTJGJ0Y+RkFGREZHRklGS0ZORkRGR0ZJLUY1NictRjg2KC1GOzYlUSRwMjFGJ0Y+RkFGREZHRklGS0ZOLUY4NigtRjs2JVEkcDIyRidGPkZBRkRGR0ZJRktGTkZERkdGSS8lJmFsaWduR1ElYXhpc0YnL0ZFUSliYXNlbGluZUYnL0ZIUSdjZW50ZXJGJy9GSlEnfGZybGVmdHxockYnLyUvYWxpZ25tZW50c2NvcGVHRkAvJSxjb2x1bW53aWR0aEdRJWF1dG9GJy8lJndpZHRoR0Zoby8lK3Jvd3NwYWNpbmdHUSYxLjBleEYnLyUuY29sdW1uc3BhY2luZ0dRJjAuOGVtRicvJSlyb3dsaW5lc0dRJW5vbmVGJy8lLGNvbHVtbmxpbmVzR0ZjcC8lJmZyYW1lR0ZjcC8lLWZyYW1lc3BhY2luZ0dRLDAuNGVtfjAuNWV4RicvJSplcXVhbHJvd3NHUSZmYWxzZUYnLyUtZXF1YWxjb2x1bW5zR0ZdcS8lLWRpc3BsYXlzdHlsZUdGXXEvJSVzaWRlR1EmcmlnaHRGJy8lMG1pbmxhYmVsc3BhY2luZ0dGYHAvJStmb3JlZ3JvdW5kR1EoWzAsMCwwXUYnLyUpcmVhZG9ubHlHRl1xL0ZCUSdub3JtYWxGJ0Zcci9JK21zZW1hbnRpY3NHRiRRJ01hdHJpeEYnLyUlb3BlbkdRJyZsc3FiO0YnLyUmY2xvc2VHUScmcnNxYjtGJ0Zeci1GLDYoLUYvNiYtRjI2Ni1GNTYnLUY4NigtRjs2J0Y9Rj5GZ3FGanFGQUZERkdGSUZLRk4tRjg2KC1GOzYnRlRGPkZncUZqcUZBRkRGR0ZJRktGTkZERkdGSS1GNTYnLUY4NigtRjs2J0ZlbkY+RmdxRmpxRkFGREZHRklGS0ZOLUY4NigtRjs2J0ZqbkY+RmdxRmpxRkFGREZHRklGS0ZORkRGR0ZJRltvRl5vRmBvRmJvRmRvRmZvRmlvRltwRl5wRmFwRmRwRmZwRmhwRltxRl5xRmBxRmJxRmVxRmdxRmpxRlxyRmdxRmpxRlxyL0ZiclEiW0YnL0ZlclEiXUYn">LV9JLFR5cGVzZXR0aW5nRzYkJSpwcm90ZWN0ZWRHSShfc3lzbGliRzYiSSxtcHJpbnRzbGFzaEdGKDYkNyNYLCUhR0YoRihbZ2whIiUhISEjJSIjIiMtSSNtaUc2JEYmL0krbW9kdWxlbmFtZUdGKEYkNiNRJHAxMUYoLUYvNiNRJHAyMUYoLUYvNiNRJHAxMkYoLUYvNiNRJHAyMkYoNyMtSSdNYXRyaXhHRiU2Iy9JJCVpZEdGKCI1QT85KilbNFluVz0=</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkqbWNvbXBsZXRlRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliR0YnNiQtSShtZmVuY2VkR0YkNigtSSVtcm93R0YkNiYtSSdtdGFibGVHRiQ2Ni1JJG10ckdGJDYmLUkkbXRkR0YkNigtRiM2JC1JI21pR0YkNiZRJFoxfGlyRicvJSdpdGFsaWNHUSV0cnVlRicvJSxtYXRodmFyaWFudEdRJ2l0YWxpY0YnL0krbXNlbWFudGljc0dGJFEnYXNzdW1lRictRj02JUY/RkBGQy8lKXJvd2FsaWduR1EhRicvJSxjb2x1bW5hbGlnbkdGTS8lK2dyb3VwYWxpZ25HRk0vJShyb3dzcGFuR1EiMUYnLyUrY29sdW1uc3BhbkdGVEZLRk5GUC1GNTYmLUY4NigtRiM2JC1GPTYmUSRaMnxpckYnRkBGQ0ZGLUY9NiVGaW5GQEZDRktGTkZQRlJGVUZLRk5GUC8lJmFsaWduR1ElYXhpc0YnL0ZMUSliYXNlbGluZUYnL0ZPUSdjZW50ZXJGJy9GUVEnfGZybGVmdHxockYnLyUvYWxpZ25tZW50c2NvcGVHRkIvJSxjb2x1bW53aWR0aEdRJWF1dG9GJy8lJndpZHRoR0Zpby8lK3Jvd3NwYWNpbmdHUSYxLjBleEYnLyUuY29sdW1uc3BhY2luZ0dRJjAuOGVtRicvJSlyb3dsaW5lc0dRJW5vbmVGJy8lLGNvbHVtbmxpbmVzR0ZkcC8lJmZyYW1lR0ZkcC8lLWZyYW1lc3BhY2luZ0dRLDAuNGVtfjAuNWV4RicvJSplcXVhbHJvd3NHUSZmYWxzZUYnLyUtZXF1YWxjb2x1bW5zR0ZecS8lLWRpc3BsYXlzdHlsZUdGXnEvJSVzaWRlR1EmcmlnaHRGJy8lMG1pbmxhYmVsc3BhY2luZ0dGYXAvJStmb3JlZ3JvdW5kR1EoWzAsMCwwXUYnLyUpcmVhZG9ubHlHRl5xL0ZEUSdub3JtYWxGJ0Zdci9GR1EnTWF0cml4RicvJSVvcGVuR1EnJmxzcWI7RicvJSZjbG9zZUdRJyZyc3FiO0YnRl9yLUYsNigtRi82Ji1GMjY2LUY1NiYtRjg2KC1GPTYnRj9GQEZocUZbckZDRktGTkZQRlJGVUZLRk5GUC1GNTYmLUY4NigtRj02J0ZpbkZARmhxRltyRkNGS0ZORlBGUkZVRktGTkZQRlxvRl9vRmFvRmNvRmVvRmdvRmpvRlxwRl9wRmJwRmVwRmdwRmlwRlxxRl9xRmFxRmNxRmZxRmhxRltyRl1yRmhxRltyRl1yL0ZiclEiW0YnL0ZlclEiXUYn">LV9JLFR5cGVzZXR0aW5nRzYkJSpwcm90ZWN0ZWRHSShfc3lzbGliRzYiSSxtcHJpbnRzbGFzaEdGKDYkNyNYLCUhR0YoRihbZ2whIiUhISEjIyIjIiItSSptY29tcGxldGVHNiRGJi9JK21vZHVsZW5hbWVHRihGJDYkLUkjbWlHRjA2JFEkWjF8aXJGKC9JK21zZW1hbnRpY3NHRjBRJ2Fzc3VtZUYoSSRaMXxpckc2Iy9JJ19sb2NhbEdGJkkwX24yMDIxMTgxNDg1Njk2R0YoLUYvNiQtRjU2JFEkWjJ8aXJGKEY4SSRaMnxpckc2Iy9GPkkwX24yMDIxMTgxNDg1OTIwR0YoNyMtSSdNYXRyaXhHRiU2Iy9JJCVpZEdGKCI1NSQ0IkdcNFluVz0=</Equation></Text-field>
+</Output>
+</Group>
+<Group view="code" labelreference="L21" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">The shape functions pulled back over a standard element are unique interpolants of form</Text-field><Text-field style="Text" layout="Normal">a*uv+b*u+c*v+d</Text-field><Text-field style="Text" layout="Normal"></Text-field><Text-field style="Text" layout="Normal">Then M*[a;b;c;d] = [f(0,0);f(1,0);f(0,1);f(1,1)];</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L22" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">M := &lt;&lt;0,0,0,1&gt;|&lt;0,1,0,1&gt;|&lt;0,0,1,1&gt;|&lt;1,1,1,1&gt;&gt;:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s1_c := LinearSolve(M,&lt;1,0,0,0&gt;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s2_c := LinearSolve(M,&lt;0,1,0,0&gt;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s3_c := LinearSolve(M,&lt;0,0,1,0&gt;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s4_c := LinearSolve(M,&lt;0,0,0,1&gt;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">poly := &lt;u*v|u|v|1&gt;:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s1 := poly.s1_c:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s2 := poly.s2_c:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s3 := poly.s3_c:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">s4 := poly.s4_c:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">shapes := &lt;s1,s2,s3,s4&gt;:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">shapes := convert(shapes,Matrix);</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkqbWNvbXBsZXRlRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliR0YnNiQtSSVtcm93R0YkNiYtSSNtaUdGJDYlUSdzaGFwZXNGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSkmQXNzaWduO0YnL0Y2USdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGQC8lKXN0cmV0Y2h5R0ZALyUqc3ltbWV0cmljR0ZALyUobGFyZ2VvcEdGQC8lLm1vdmFibGVsaW1pdHNHRkAvJSdhY2NlbnRHRkAvJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZPLUkobWZlbmNlZEdGJDYoLUYsNiYtSSdtdGFibGVHRiQ2OC1JJG10ckdGJDYmLUkkbXRkR0YkNigtRiw2Ki1GLDYmLUYvNiVRInVGJ0YyRjUtRjk2LVExJkludmlzaWJsZVRpbWVzO0YnRjxGPkZBRkNGRUZHRklGSy9GTlEmMC4wZW1GJy9GUUZlby1GLzYlUSJ2RidGMkY1RjwtRjk2LVEoJm1pbnVzO0YnRjxGPkZBRkNGRUZHRklGSy9GTlEsMC4yMjIyMjIyZW1GJy9GUUZecEZeb0Zqb0Znby1GOTYtUScmcGx1cztGJ0Y8Rj5GQUZDRkVGR0ZJRktGXXBGX3AtSSNtbkdGJDYkUSIxRidGPEY8LyUpcm93YWxpZ25HUSFGJy8lLGNvbHVtbmFsaWduR0ZpcC8lK2dyb3VwYWxpZ25HRmlwLyUocm93c3BhbkdGZnAvJStjb2x1bW5zcGFuR0ZmcEZncEZqcEZccS1GZW42Ji1GaG42KC1GLDYnLUY5Ni1RKiZ1bWludXMwO0YnRjxGPkZBRkNGRUZHRklGS0ZdcEZfcEZcb0ZgcEZeb0Y8RmdwRmpwRlxxRl5xRmBxRmdwRmpwRlxxLUZlbjYmLUZobjYoLUYsNidGaHFGXG9GYHBGZ29GPEZncEZqcEZccUZecUZgcUZncEZqcEZccS1GZW42Ji1GaG42KEZcb0ZncEZqcEZccUZecUZgcUZncEZqcEZccS8lJmFsaWduR1ElYXhpc0YnL0ZocFEpYmFzZWxpbmVGJy9GW3FRJ2NlbnRlckYnL0ZdcVEnfGZybGVmdHxockYnLyUvYWxpZ25tZW50c2NvcGVHRjQvJSxjb2x1bW53aWR0aEdRJWF1dG9GJy8lJndpZHRoR0Zicy8lK3Jvd3NwYWNpbmdHUSYxLjBleEYnLyUuY29sdW1uc3BhY2luZ0dRJjAuOGVtRicvJSlyb3dsaW5lc0dRJW5vbmVGJy8lLGNvbHVtbmxpbmVzR0ZddC8lJmZyYW1lR0ZddC8lLWZyYW1lc3BhY2luZ0dRLDAuNGVtfjAuNWV4RicvJSplcXVhbHJvd3NHRkAvJS1lcXVhbGNvbHVtbnNHRkAvJS1kaXNwbGF5c3R5bGVHRkAvJSVzaWRlR1EmcmlnaHRGJy8lMG1pbmxhYmVsc3BhY2luZ0dGanMvJStmb3JlZ3JvdW5kR1EoWzAsMCwwXUYnLyUpcmVhZG9ubHlHRkBGPEY8L0krbXNlbWFudGljc0dGJFEnTWF0cml4RicvJSVvcGVuR1EnJmxzcWI7RicvJSZjbG9zZUdRJyZyc3FiO0YnRmV1RjwtRlM2KC1GLDYmLUZYNjgtRmVuNiYtRmhuNigtRiw2LC1GLDYoLUYvNidGYG9GMkZgdUZjdUY1RmFvLUYvNidGaW9GMkZgdUZjdUY1RmB1RmN1RjwtRjk2L0ZccEZgdUZjdUY8Rj5GQUZDRkVGR0ZJRktGXXBGX3BGXHdGYHdGXnctRjk2L1EiK0YnRmB1RmN1RjxGPkZBRkNGRUZHRklGS0ZdcEZfcC1GZHA2JkZmcEZgdUZjdUY8RmB1RmN1RjxGZ3BGanBGXHFGXnFGYHFGZ3BGanBGXHEtRmVuNiYtRmhuNigtRiw2KS1GOTYvRmpxRmB1RmN1RjxGPkZBRkNGRUZHRklGS0ZdcEZfcEZqdkZid0Zcd0ZgdUZjdUY8RmdwRmpwRlxxRl5xRmBxRmdwRmpwRlxxLUZlbjYmLUZobjYoLUYsNilGXXhGanZGYndGXndGYHVGY3VGPEZncEZqcEZccUZecUZgcUZncEZqcEZccS1GZW42Ji1GaG42KEZqdkZncEZqcEZccUZecUZgcUZncEZqcEZccUZlckZockZqckZcc0Zec0Zgc0Zjc0Zlc0Zoc0ZbdEZedEZgdEZidEZldEZndEZpdEZbdUZedUZgdUZjdUY8RmB1RmN1RjwvRml1USJbRicvRlx2USJdRic=">LV9JLFR5cGVzZXR0aW5nRzYkJSpwcm90ZWN0ZWRHSShfc3lzbGliRzYiSSxtcHJpbnRzbGFzaEdGKDYkNyM+SSdzaGFwZXNHRihYLCUhR0YoRihbZ2whIiUhISEjJSIlIiItSSVtcm93RzYkRiYvSSttb2R1bGVuYW1lR0YoRiQ2KS1GMTYlLUkjbWlHRjI2I1EidUYoLUkjbW9HRjI2I1ExJkludmlzaWJsZVRpbWVzO0YoLUY5NiNRInZGKC1GPTYjUSgmbWludXM7RihGOEZDRkAtRj02I1EnJnBsdXM7RigtSSNtbkdGMjYjUSIxRigtRjE2Ji1GPTYjUSomdW1pbnVzMDtGKEY2RkZGOC1GMTYmRk9GNkZGRkBGNjcjLUknTWF0cml4R0YlNiMvSSQlaWRHRigiNVF3NEdcNFluVz0=</Equation></Text-field>
+</Output>
+</Group>
+<Group view="code" labelreference="L84" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Check to make sure shape functions evaluate as expected</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L85" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 0, v = 0,
+     shapes[1,1]);</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 1, v = 0,
+     shapes[1,1]);</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 0, v = 1,
+     shapes[1,1]);</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 1, v = 1,
+     shapes[1,1]);</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMUYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIi</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+</Group>
+<Group view="code" hide-input="false" labelreference="L87" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 0, v = 0,
+     shapes[2,1]);</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 1, v = 0,
+     shapes[2,1]);</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 0, v = 1,
+     shapes[2,1]);</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 1, v = 1,
+     shapes[2,1]);</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMUYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIi</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+</Group>
+<Group view="code" hide-input="false" labelreference="L89" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 0, v = 0,
+     shapes[3,1]);</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 1, v = 0,
+     shapes[3,1]);</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 0, v = 1,
+     shapes[3,1]);</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 1, v = 1,
+     shapes[3,1]);</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMUYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIi</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+</Group>
+<Group view="code" hide-input="false" labelreference="L90" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 0, v = 0,
+     shapes[4,1]);</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 1, v = 0,
+     shapes[4,1]);</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 0, v = 1,
+     shapes[4,1]);</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">subs(u = 1, v = 1,
+     shapes[4,1]);</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMEYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIh</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMUYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIi</Equation></Text-field>
+</Output>
+</Group>
+<Group view="code" labelreference="L25" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Define the G:Std --&gt; Cyl_elem</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L26" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">G := Matrix(3,1):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">G[1,1] := P[1,1] + u*(P[1,2] - P[1,1]):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">G[2,1] := P[2,1] + u*(P[2,2] - P[2,1]):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">G[3,1] := Z[1,1] + v*(Z[2,1] - Z[1,1]):</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L28" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Compute the surface area Jacobian for F\134circ G</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L31" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">FG := subs(x = G[1,1], y = G[2,1], z = G[3,1],
+           F):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DFG := Matrix(3,2):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DFG[1..3,1] := diff(FG,u):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DFG[1..3,2] := diff(FG,v):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Jsigma := sqrt(simplify(Determinant(Transpose(DFG).DFG))):</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L39" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Compute the unit normal under FG parameterized by standard elements</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L41" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">n := simplify(1/Jsigma*simplify(CrossProduct(DFG[1..3,1],DFG[1..3,2]))):</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L74" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Check length of unit normal</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L75" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">simplify(Transpose(n).n);</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMUYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIi</Equation></Text-field>
+</Output>
+</Group>
+<Group view="code" labelreference="L92" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Check that unit normal is orthogonal to tangent space of DF</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L93" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">simplify(Transpose(n).DFG);</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkqbWNvbXBsZXRlRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliR0YnNiQtSShtZmVuY2VkR0YkNigtSSVtcm93R0YkNiYtSSdtdGFibGVHRiQ2NS1JJG10ckdGJDYnLUkkbXRkR0YkNigtSSNtbkdGJDYkUSIwRicvJSxtYXRodmFyaWFudEdRJ25vcm1hbEYnLyUpcm93YWxpZ25HUSFGJy8lLGNvbHVtbmFsaWduR0ZDLyUrZ3JvdXBhbGlnbkdGQy8lKHJvd3NwYW5HUSIxRicvJStjb2x1bW5zcGFuR0ZKRjdGQUZERkYvJSZhbGlnbkdRJWF4aXNGJy9GQlEpYmFzZWxpbmVGJy9GRVEnY2VudGVyRicvRkdRJ3xmcmxlZnR8aHJGJy8lL2FsaWdubWVudHNjb3BlR1EldHJ1ZUYnLyUsY29sdW1ud2lkdGhHUSVhdXRvRicvJSZ3aWR0aEdGZW4vJStyb3dzcGFjaW5nR1EmMS4wZXhGJy8lLmNvbHVtbnNwYWNpbmdHUSYwLjhlbUYnLyUpcm93bGluZXNHUSVub25lRicvJSxjb2x1bW5saW5lc0dGYG8vJSZmcmFtZUdGYG8vJS1mcmFtZXNwYWNpbmdHUSwwLjRlbX4wLjVleEYnLyUqZXF1YWxyb3dzR1EmZmFsc2VGJy8lLWVxdWFsY29sdW1uc0dGam8vJS1kaXNwbGF5c3R5bGVHRmpvLyUlc2lkZUdRJnJpZ2h0RicvJTBtaW5sYWJlbHNwYWNpbmdHRl1vLyUrZm9yZWdyb3VuZEdRKFswLDAsMF1GJy8lKXJlYWRvbmx5R0Zqb0Y+Rj4vSSttc2VtYW50aWNzR0YkUSpSb3dWZWN0b3JGJy8lJW9wZW5HUScmbHNxYjtGJy8lJmNsb3NlR1EnJnJzcWI7RidGaXAtRiw2KC1GLzYmLUYyNjUtRjU2Jy1GODYoLUY7NiZGPUZkcEZncEY+RkFGREZGRkhGS0ZqcUZBRkRGRkZNRlAvRkVGYXBGVEZWRllGZm5GaG5GW29GXm9GYW9GY29GZW9GaG9GW3BGXXBGX3BGYnBGZHBGZ3BGPkZkcEZncEY+L0ZdcVEiW0YnL0ZgcVEiXUYn">LV9JLFR5cGVzZXR0aW5nRzYkJSpwcm90ZWN0ZWRHSShfc3lzbGliRzYiSSxtcHJpbnRzbGFzaEdGKDYkNyMtSSdSVEFCTEVHRig2JSI1VTApKWZcNFluVz0tSSdWRUNUT1JHRig2IzckLUkjbW5HNiRGJi9JK21vZHVsZW5hbWVHRihGJDYjUSIwRihGNCZJJ1ZlY3RvckdGJTYjSSRyb3dHRig3Iy1GOzYjL0kkJWlkR0YoRi8=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L42" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Build the Mbd matrix</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L44" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">preMbd := Matrix(4,4):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 4 do
+    for j from 1 to 4 do
+        preMbd[i,j] := shapes[i,1]*shapes[j,1]*Jsigma:
+    od:
+od:</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L46" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Mbd := Matrix(4,4):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 4 do
+    for j from 1 to 4 do
+        Mbd[i,j] := int(preMbd[i,j],[u=0..1, v=0..1]):
+    od:
+od:</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L47" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Compute the tangential gradients of shape functions in eulerian coordinates</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="code" labelreference="L52" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Build the extension of G to full volume element</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L51" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Gext := Matrix(3,1):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Gext[1,1] := G[1,1] - w*(P[2,2] - P[2,1]):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Gext[2,1] := G[2,1] + w*(P[1,2] - P[1,1]):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Gext[3,1] := G[3,1]:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">print(Gext);</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkqbWNvbXBsZXRlRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliR0YnNiQtSShtZmVuY2VkR0YkNigtSSVtcm93R0YkNiYtSSdtdGFibGVHRiQ2Ny1JJG10ckdGJDYmLUkkbXRkR0YkNigtRi82KC1JI21pR0YkNiVRJHAxMUYnLyUnaXRhbGljR1EldHJ1ZUYnLyUsbWF0aHZhcmlhbnRHUSdpdGFsaWNGJy1JI21vR0YkNi1RJyZwbHVzO0YnL0ZEUSdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGTi8lKXN0cmV0Y2h5R0ZOLyUqc3ltbWV0cmljR0ZOLyUobGFyZ2VvcEdGTi8lLm1vdmFibGVsaW1pdHNHRk4vJSdhY2NlbnRHRk4vJSdsc3BhY2VHUSwwLjIyMjIyMjJlbUYnLyUncnNwYWNlR0Znbi1GLzYmLUY9NiVRInVGJ0ZARkMtRkc2LVExJkludmlzaWJsZVRpbWVzO0YnRkpGTEZPRlFGU0ZVRldGWS9GZm5RJjAuMGVtRicvRmluRmNvLUYsNiQtRi82Ji1GPTYlUSRwMTJGJ0ZARkMtRkc2LVEoJm1pbnVzO0YnRkpGTEZPRlFGU0ZVRldGWUZlbkZobkY8RkpGSkZKRlxwLUYvNiYtRj02JVEid0YnRkBGQ0Zfby1GLDYkLUYvNiYtRj02JVEkcDIyRidGQEZDRlxwLUY9NiVRJHAyMUYnRkBGQ0ZKRkpGSkZKLyUpcm93YWxpZ25HUSFGJy8lLGNvbHVtbmFsaWduR0ZgcS8lK2dyb3VwYWxpZ25HRmBxLyUocm93c3BhbkdRIjFGJy8lK2NvbHVtbnNwYW5HRmdxRl5xRmFxRmNxLUY1NiYtRjg2KC1GLzYoRltxRkYtRi82JkZcb0Zfb0ZkcEZKRkYtRi82JkZhcEZfb0Zlb0ZKRkpGXnFGYXFGY3FGZXFGaHFGXnFGYXFGY3EtRjU2Ji1GODYoLUYvNiYtRiM2JC1GPTYmUSRaMXxpckYnRkBGQy9JK21zZW1hbnRpY3NHRiRRJ2Fzc3VtZUYnLUY9NiVGXnNGQEZDRkYtRi82Ji1GPTYlUSJ2RidGQEZDRl9vLUYsNiQtRi82Ji1GIzYkLUY9NiZRJFoyfGlyRidGQEZDRl9zLUY9NiVGYXRGQEZDRlxwRmpyRkpGSkZKRkpGXnFGYXFGY3FGZXFGaHFGXnFGYXFGY3EvJSZhbGlnbkdRJWF4aXNGJy9GX3FRKWJhc2VsaW5lRicvRmJxUSdjZW50ZXJGJy9GZHFRJ3xmcmxlZnR8aHJGJy8lL2FsaWdubWVudHNjb3BlR0ZCLyUsY29sdW1ud2lkdGhHUSVhdXRvRicvJSZ3aWR0aEdGYXUvJStyb3dzcGFjaW5nR1EmMS4wZXhGJy8lLmNvbHVtbnNwYWNpbmdHUSYwLjhlbUYnLyUpcm93bGluZXNHUSVub25lRicvJSxjb2x1bW5saW5lc0dGXHYvJSZmcmFtZUdGXHYvJS1mcmFtZXNwYWNpbmdHUSwwLjRlbX4wLjVleEYnLyUqZXF1YWxyb3dzR0ZOLyUtZXF1YWxjb2x1bW5zR0ZOLyUtZGlzcGxheXN0eWxlR0ZOLyUlc2lkZUdRJnJpZ2h0RicvJTBtaW5sYWJlbHNwYWNpbmdHRml1LyUrZm9yZWdyb3VuZEdRKFswLDAsMF1GJy8lKXJlYWRvbmx5R0ZORkpGSi9GYHNRJ01hdHJpeEYnLyUlb3BlbkdRJyZsc3FiO0YnLyUmY2xvc2VHUScmcnNxYjtGJ0Zkdy1GLDYoLUYvNiYtRjI2Ny1GNTYmLUY4NigtRi82Ki1GPTYnRj9GQEZfd0Zid0ZDLUZHNi9RIitGJ0Zfd0Zid0ZKRkxGT0ZRRlNGVUZXRllGZW5GaG4tRi82KC1GPTYnRl5vRkBGX3dGYndGQ0Zfby1GLDYmLUYvNigtRj02J0ZbcEZARl93RmJ3RkMtRkc2L0ZecEZfd0Zid0ZKRkxGT0ZRRlNGVUZXRllGZW5GaG5GaHhGX3dGYndGSkZfd0Zid0ZKRl93RmJ3RkpGZ3ktRi82KC1GPTYnRmNwRkBGX3dGYndGQ0Zfby1GLDYmLUYvNigtRj02J0ZqcEZARl93RmJ3RkNGZ3ktRj02J0ZdcUZARl93RmJ3RkNGX3dGYndGSkZfd0Zid0ZKRl93RmJ3RkpGX3dGYndGSkZecUZhcUZjcUZlcUZocUZecUZhcUZjcS1GNTYmLUY4NigtRi82KkZjekZqeC1GLzYoRl95Rl9vRl16Rl93RmJ3RkpGangtRi82KEZbekZfb0ZheUZfd0Zid0ZKRl93RmJ3RkpGXnFGYXFGY3FGZXFGaHFGXnFGYXFGY3EtRjU2Ji1GODYoLUYvNigtRj02J0Zec0ZARl93RmJ3RkNGangtRi82KC1GPTYnRmhzRkBGX3dGYndGQ0Zfby1GLDYmLUYvNigtRj02J0ZhdEZARl93RmJ3RkNGZ3lGZVtsRl93RmJ3RkpGX3dGYndGSkZfd0Zid0ZKRl93RmJ3RkpGXnFGYXFGY3FGZXFGaHFGXnFGYXFGY3FGZHRGZ3RGaXRGW3VGXXVGX3VGYnVGZHVGZ3VGanVGXXZGX3ZGYXZGZHZGZnZGaHZGanZGXXdGX3dGYndGSkZfd0Zid0ZKL0Znd1EiW0YnL0Zqd1EiXUYn">LV9JLFR5cGVzZXR0aW5nRzYkJSpwcm90ZWN0ZWRHSShfc3lzbGliRzYiSSxtcHJpbnRzbGFzaEdGKDYkNyNYLCUhR0YoRihbZ2whIiUhISEjJCIkIiItSSVtcm93RzYkRiYvSSttb2R1bGVuYW1lR0YoRiQ2Jy1JI21pR0YwNiNRJHAxMUYoLUkjbW9HRjA2I1EnJnBsdXM7RigtRi82JS1GNTYjUSJ1RigtRjk2I1ExJkludmlzaWJsZVRpbWVzO0YoLUkobWZlbmNlZEdGMDYjLUYvNiUtRjU2I1EkcDEyRigtRjk2I1EoJm1pbnVzO0YoRjRGTC1GLzYlLUY1NiNRIndGKEZBLUZFNiMtRi82JS1GNTYjUSRwMjJGKEZMLUY1NiNRJHAyMUYoLUYvNidGZW5GOC1GLzYlRj5GQUZURjgtRi82JUZRRkFGRC1GLzYlLUkqbWNvbXBsZXRlR0YwNiQtRjU2JFEkWjF8aXJGKC9JK21zZW1hbnRpY3NHRjBRJ2Fzc3VtZUYoSSRaMXxpckc2Iy9JJ19sb2NhbEdGJkkwX24yMDIxMTgxNDg1Njk2R0YoRjgtRi82JS1GNTYjUSJ2RihGQS1GRTYjLUYvNiUtRmFvNiQtRjU2JFEkWjJ8aXJGKEZmb0kkWjJ8aXJHNiMvRlxwSTBfbjIwMjExODE0ODU5MjBHRihGTEZgbzcjLUknTWF0cml4R0YlNiMvSSQlaWRHRigiNSFmUS0yJjRZblc9</Equation></Text-field>
+</Output>
+</Group>
+<Group view="code" labelreference="L53" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Define the inverse G function</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L54" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Ginv := &lt;x,y,z&gt; - &lt;P[1,1],P[2,1],Z[1,1]&gt;:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Ginv := convert(Ginv,Matrix):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Ginv := simplify(
+        MatrixInverse(&lt;&lt;P[1,2] - P[1,1],P[2,2] - P[2,1],0&gt;|&lt;0,0,Z[2,1] - Z[1,   
+                            1]&gt;|&lt;-(P[2,2]- P[2,1]),P[1,2] - P[1,1],0&gt;&gt;).
+                     Ginv):</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L97" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Check to make sure Ginv is an inverse of G</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L98" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Gcheck := simplify(subs(u = Ginv[1,1], v = Ginv[2,1], w = Ginv[3,1],
+                   Gext));</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Gcheck := simplify(subs(x = Gext[1,1], y = Gext[2,1], z = Gext[3,1],
+                   Ginv));</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkqbWNvbXBsZXRlRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliR0YnNiQtSSVtcm93R0YkNiYtSSNtaUdGJDYlUSdHY2hlY2tGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSkmQXNzaWduO0YnL0Y2USdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGQC8lKXN0cmV0Y2h5R0ZALyUqc3ltbWV0cmljR0ZALyUobGFyZ2VvcEdGQC8lLm1vdmFibGVsaW1pdHNHRkAvJSdhY2NlbnRHRkAvJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZPLUkobWZlbmNlZEdGJDYoLUYsNiYtSSdtdGFibGVHRiQ2Ny1JJG10ckdGJDYmLUkkbXRkR0YkNigtRi82JVEieEYnRjJGNS8lKXJvd2FsaWduR1EhRicvJSxjb2x1bW5hbGlnbkdGX28vJStncm91cGFsaWduR0Zfby8lKHJvd3NwYW5HUSIxRicvJStjb2x1bW5zcGFuR0Zmb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYlUSJ5RidGMkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRInpGJ0YyRjVGXW9GYG9GYm9GZG9GZ29GXW9GYG9GYm8vJSZhbGlnbkdRJWF4aXNGJy9GXm9RKWJhc2VsaW5lRicvRmFvUSdjZW50ZXJGJy9GY29RJ3xmcmxlZnR8aHJGJy8lL2FsaWdubWVudHNjb3BlR0Y0LyUsY29sdW1ud2lkdGhHUSVhdXRvRicvJSZ3aWR0aEdGZHEvJStyb3dzcGFjaW5nR1EmMS4wZXhGJy8lLmNvbHVtbnNwYWNpbmdHUSYwLjhlbUYnLyUpcm93bGluZXNHUSVub25lRicvJSxjb2x1bW5saW5lc0dGX3IvJSZmcmFtZUdGX3IvJS1mcmFtZXNwYWNpbmdHUSwwLjRlbX4wLjVleEYnLyUqZXF1YWxyb3dzR0ZALyUtZXF1YWxjb2x1bW5zR0ZALyUtZGlzcGxheXN0eWxlR0ZALyUlc2lkZUdRJnJpZ2h0RicvJTBtaW5sYWJlbHNwYWNpbmdHRlxyLyUrZm9yZWdyb3VuZEdRKFswLDAsMF1GJy8lKXJlYWRvbmx5R0ZARjxGPC9JK21zZW1hbnRpY3NHRiRRJ01hdHJpeEYnLyUlb3BlbkdRJyZsc3FiO0YnLyUmY2xvc2VHUScmcnNxYjtGJ0Znc0Y8LUZTNigtRiw2Ji1GWDY3LUZlbjYmLUZobjYoLUYvNidGXG9GMkZic0Zlc0Y1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNidGX3BGMkZic0Zlc0Y1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNidGZnBGMkZic0Zlc0Y1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvRmdwRmpwRlxxRl5xRmBxRmJxRmVxRmdxRmpxRl1yRmByRmJyRmRyRmdyRmlyRltzRl1zRmBzRmJzRmVzRjxGYnNGZXNGPC9GW3RRIltGJy9GXnRRIl1GJw==">LV9JLFR5cGVzZXR0aW5nRzYkJSpwcm90ZWN0ZWRHSShfc3lzbGliRzYiSSxtcHJpbnRzbGFzaEdGKDYkNyM+SSdHY2hlY2tHRihYLCUhR0YoRihbZ2whIiUhISEjJCIkIiItSSNtaUc2JEYmL0krbW9kdWxlbmFtZUdGKEYkNiNRInhGKC1GMTYjUSJ5RigtRjE2I1EiekYoNyMtSSdNYXRyaXhHRiU2Iy9JJCVpZEdGKCI1WSNvZyZcNFluVz0=</Equation></Text-field>
+</Output>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkqbWNvbXBsZXRlRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliR0YnNiQtSSVtcm93R0YkNiYtSSNtaUdGJDYlUSdHY2hlY2tGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSkmQXNzaWduO0YnL0Y2USdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGQC8lKXN0cmV0Y2h5R0ZALyUqc3ltbWV0cmljR0ZALyUobGFyZ2VvcEdGQC8lLm1vdmFibGVsaW1pdHNHRkAvJSdhY2NlbnRHRkAvJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZPLUkobWZlbmNlZEdGJDYoLUYsNiYtSSdtdGFibGVHRiQ2Ny1JJG10ckdGJDYmLUkkbXRkR0YkNigtRi82JVEidUYnRjJGNS8lKXJvd2FsaWduR1EhRicvJSxjb2x1bW5hbGlnbkdGX28vJStncm91cGFsaWduR0Zfby8lKHJvd3NwYW5HUSIxRicvJStjb2x1bW5zcGFuR0Zmb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYlUSJ2RidGMkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRIndGJ0YyRjVGXW9GYG9GYm9GZG9GZ29GXW9GYG9GYm8vJSZhbGlnbkdRJWF4aXNGJy9GXm9RKWJhc2VsaW5lRicvRmFvUSdjZW50ZXJGJy9GY29RJ3xmcmxlZnR8aHJGJy8lL2FsaWdubWVudHNjb3BlR0Y0LyUsY29sdW1ud2lkdGhHUSVhdXRvRicvJSZ3aWR0aEdGZHEvJStyb3dzcGFjaW5nR1EmMS4wZXhGJy8lLmNvbHVtbnNwYWNpbmdHUSYwLjhlbUYnLyUpcm93bGluZXNHUSVub25lRicvJSxjb2x1bW5saW5lc0dGX3IvJSZmcmFtZUdGX3IvJS1mcmFtZXNwYWNpbmdHUSwwLjRlbX4wLjVleEYnLyUqZXF1YWxyb3dzR0ZALyUtZXF1YWxjb2x1bW5zR0ZALyUtZGlzcGxheXN0eWxlR0ZALyUlc2lkZUdRJnJpZ2h0RicvJTBtaW5sYWJlbHNwYWNpbmdHRlxyLyUrZm9yZWdyb3VuZEdRKFswLDAsMF1GJy8lKXJlYWRvbmx5R0ZARjxGPC9JK21zZW1hbnRpY3NHRiRRJ01hdHJpeEYnLyUlb3BlbkdRJyZsc3FiO0YnLyUmY2xvc2VHUScmcnNxYjtGJ0Znc0Y8LUZTNigtRiw2Ji1GWDY3LUZlbjYmLUZobjYoLUYvNidGXG9GMkZic0Zlc0Y1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNidGX3BGMkZic0Zlc0Y1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNidGZnBGMkZic0Zlc0Y1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvRmdwRmpwRlxxRl5xRmBxRmJxRmVxRmdxRmpxRl1yRmByRmJyRmRyRmdyRmlyRltzRl1zRmBzRmJzRmVzRjxGYnNGZXNGPC9GW3RRIltGJy9GXnRRIl1GJw==">LV9JLFR5cGVzZXR0aW5nRzYkJSpwcm90ZWN0ZWRHSShfc3lzbGliRzYiSSxtcHJpbnRzbGFzaEdGKDYkNyM+SSdHY2hlY2tHRihYLCUhR0YoRihbZ2whIiUhISEjJCIkIiItSSNtaUc2JEYmL0krbW9kdWxlbmFtZUdGKEYkNiNRInVGKC1GMTYjUSJ2RigtRjE2I1Eid0YoNyMtSSdNYXRyaXhHRiU2Iy9JJCVpZEdGKCI1SUcxY1w0WW5XPQ==</Equation></Text-field>
+</Output>
+</Group>
+<Group view="code" hide-input="false" labelreference="L55" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Pull the 'constant extensions' of shape functions and n field on standard element back to eulerian coordinates</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L56" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">shapes_eul := Matrix(4,1):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 4 do
+    shapes_eul[i,1] := subs(u = Ginv[1,1], v = Ginv[2,1], w = Ginv[3,1],
+                            shapes[i,1]):
+    shapes_eul[i,1] := subs(x = 1/lambda*x, y = 1/lambda*y, 
+                            shapes_eul[i,1]):
+    shapes_eul[i,1] := simplify(shapes_eul[i,1]):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L57" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 3 do
+    n[i] := subs(u = Ginv[1,1], v = Ginv[2,1], w = Ginv[3,1],
+                 n[i]):
+    n[i] := subs(x = 1/lambda*x, y = 1/lambda*y,
+                 n[i]):
+od:</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L100" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Add another check to make sure n still of unit length</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L101" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">simplify(Transpose(n).n);</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkjbW5HNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHRic2JFEiMUYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJw==">IiIi</Equation></Text-field>
+</Output>
+</Group>
+<Group view="code" labelreference="L59" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Compute the eulerian gradients of shape functions projected onto the eulerian tangent space</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L60" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_shapes_eul := Matrix(4,3):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Vars := &lt;x,y,z&gt;:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">n := convert(n,Matrix):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 4 do
+    for j from 1 to 3 do
+        nabla_shapes_eul[i,j] := diff(shapes_eul[i,1],Vars[j]):
+    od:
+od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 4 do
+    projn := nabla_shapes_eul[i,1..3].n:
+    projn := projn[1]:
+    nabla_shapes_eul[i,1..3] := simplify(
+                                         nabla_shapes_eul[i,1..3] - 
+                                         projn*Transpose(n[1..3,1])
+                                         ):
+od:</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L64" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Build the Kbd matrix</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L68" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">preKbd := Matrix(4,4):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 4 do
+    for j from 1 to 4 do
+        preKbd[i,j] := nabla_shapes_eul[i,1..3].
+                       Transpose(nabla_shapes_eul[j,1..3]):
+        preKbd[i,j] := simplify(preKbd[i,j]):
+        preKbd[i,j] := subs(x = lambda*x, y = lambda*y,
+                            preKbd[i,j]):
+        preKbd[i,j] := simplify(preKbd[i,j]):
+        preKbd[i,j] := subs(x = G[1,1], y = G[2,1], z = G[3,1],
+                            preKbd[i,j]):
+        preKbd[i,j] := simplify(preKbd[i,j]):
+        preKbd[i,j] := preKbd[i,j]*Jsigma:
+        preKbd[i,j] := simplify(preKbd[i,j]):
+   od:
+od:</Text-field><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L72" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Kbd := Matrix(4,4):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 4 do
+    for j from 1 to 4 do
+        Kbd[i,j] := int(preKbd[i,j],[u=0..1, v=0..1]):
+        Kbd[i,j] := simplify(Kbd[i,j]):
+    od:
+od:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L79" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Write these terms into Matlab code written to text files</Text-field>
+</Input>
+</Group>
+<Group labelreference="L77" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">writeto(&quot;bd_local.txt&quot;):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L78" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[1,1],resultname=&quot;Mbd_1c1_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[1,2],resultname=&quot;Mbd_1c2_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[1,3],resultname=&quot;Mbd_1c3_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[1,4],resultname=&quot;Mbd_1c4_&quot;):</Text-field><Text-field style="Text" layout="Normal">Next row</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[2,1],resultname=&quot;Mbd_2c1_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[2,2],resultname=&quot;Mbd_2c2_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[2,3],resultname=&quot;Mbd_2c3_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[2,4],resultname=&quot;Mbd_2c4_&quot;):</Text-field><Text-field style="Text" layout="Normal">Next row</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[3,1],resultname=&quot;Mbd_3c1_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[3,2],resultname=&quot;Mbd_3c2_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[3,3],resultname=&quot;Mbd_3c3_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[3,4],resultname=&quot;Mbd_3c4_&quot;):</Text-field><Text-field style="Text" layout="Normal">Next row </Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[4,1],resultname=&quot;Mbd_4c1_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[4,2],resultname=&quot;Mbd_4c2_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[4,3],resultname=&quot;Mbd_4c3_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Mbd[4,4],resultname=&quot;Mbd_4c4_&quot;):</Text-field>
+</Input>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+</Group>
+<Group view="code" labelreference="L83" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L80" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[1,1],resultname=&quot;Kbd_1c1_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[1,2],resultname=&quot;Kbd_1c2_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[1,3],resultname=&quot;Kbd_1c3_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[1,4],resultname=&quot;Kbd_1c4_&quot;):</Text-field><Text-field style="Text" layout="Normal">Next row</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[2,1],resultname=&quot;Kbd_2c1_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[2,2],resultname=&quot;Kbd_2c2_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[2,3],resultname=&quot;Kbd_2c3_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[2,4],resultname=&quot;Kbd_2c4_&quot;):</Text-field><Text-field style="Text" layout="Normal">Next row</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[3,1],resultname=&quot;Kbd_3c1_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[3,2],resultname=&quot;Kbd_3c2_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[3,3],resultname=&quot;Kbd_3c3_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[3,4],resultname=&quot;Kbd_3c4_&quot;):</Text-field><Text-field style="Text" layout="Normal">Next row </Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[4,1],resultname=&quot;Kbd_4c1_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[4,2],resultname=&quot;Kbd_4c2_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[4,3],resultname=&quot;Kbd_4c3_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[4,4],resultname=&quot;Kbd_4c4_&quot;):</Text-field>
+</Input>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+</Group>
+<Group labelreference="L76" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">writeto(terminal):</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L73" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Adding a section that computex the Kbd matrix by using the first fundamental form form of the Laplace-Beltrami to see if this leads to better agreement in Matlab</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L103" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">FF := Transpose(DFG).DFG:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">FFinv := simplify(MatrixInverse(FF)):</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L102" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">nabla_shapes := Matrix(4,2,&lt;diff(shapes,u) | diff(shapes,v)&gt;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">preKbd := zeros(4,4):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 4 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    for j from 1 to 4 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">        preKbd[i,j] := Jsigma*nabla_shapes[i,1..2].(FFinv.(Transpose(nabla_shapes[j,1..2]))):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L104" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Kbd := zeros(4,4):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to 4 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    for j from 1 to 4 do</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">        Kbd[i,j] := int(int(preKbd[i,j],u=0..1),v=0..1):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">    od:</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">od:</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L108" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">writeto(&quot;kbd_check.txt&quot;):</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L109" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[1,1],resultname=&quot;Kbd_1c1_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[1,2],resultname=&quot;Kbd_1c2_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[1,3],resultname=&quot;Kbd_1c3_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[1,4],resultname=&quot;Kbd_1c4_&quot;):</Text-field><Text-field style="Text" layout="Normal">Next row</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[2,1],resultname=&quot;Kbd_2c1_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[2,2],resultname=&quot;Kbd_2c2_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[2,3],resultname=&quot;Kbd_2c3_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[2,4],resultname=&quot;Kbd_2c4_&quot;):</Text-field><Text-field style="Text" layout="Normal">Next row</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[3,1],resultname=&quot;Kbd_3c1_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[3,2],resultname=&quot;Kbd_3c2_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[3,3],resultname=&quot;Kbd_3c3_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[3,4],resultname=&quot;Kbd_3c4_&quot;):</Text-field><Text-field style="Text" layout="Normal">Next row </Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[4,1],resultname=&quot;Kbd_4c1_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[4,2],resultname=&quot;Kbd_4c2_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[4,3],resultname=&quot;Kbd_4c3_&quot;):</Text-field><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Matlab(Kbd[4,4],resultname=&quot;Kbd_4c4_&quot;):</Text-field>
+</Input>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20following%20variable%20name%20replacements%20were%20made%3A%20H%7E%20-%3E%20cg,%20R_b%7E%20-%3E%20cg1,%20R_t%7E%20-%3E%20cg3,%20Z1%7E%20-%3E%20cg5,%20Z2%7E%20-%3E%20cg7" hyperlink="true"><Font style="HyperlinkWarning">Warning, the following variable name replacements were made: H~ -&gt; cg, R_b~ -&gt; cg1, R_t~ -&gt; cg3, Z1~ -&gt; cg5, Z2~ -&gt; cg7</Font></Hyperlink></Text-field>
+</Output>
+</Group>
+<Group view="code" labelreference="L110" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">writeto(terminal):<Equation executable="true" style="2D Math" input-equation="" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYlLUkjbWlHRiQ2I1EhRicvJStleGVjdXRhYmxlR1EmZmFsc2VGJy8lLG1hdGh2YXJpYW50R1Enbm9ybWFsRic=">LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYjLUkjbWlHRiQ2I1EhRic=</Equation></Text-field>
+</Input>
+</Group></Presentation-Block>
+</Worksheet>
