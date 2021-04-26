@@ -3,11 +3,12 @@ function [activation,Evol,messenger] =...
                                                 param,delta_r)
 %Run cone response for given parameters and param rel shift by delta_r
 %   datamat, pointer are those output by data. param is the index of
-%    datamat that is undergoing a relative shift of delta_r
+%    datamat that is undergoing a relative shift of delta_r. If param is
+%    NaN that means a Sobol trial.
 %   activation,Evol, messenger are cells that contain the necessary output 
 
 %% New parameter value
-if param ~= 0
+if (~isnan(param))&&(param ~= 0)
     datamat(param) = (1+delta_r)*datamat(param);
 end
 %% Declare auxiliary flags
@@ -119,6 +120,11 @@ end
           flag_restart,rst_index] = ...
           data(datamat,pointer);
 
+if isnan(param)
+    % This is a Sobol trial and so convert amin to alpha_min
+    alpha_min = falpha_min(alpha_min,alpha_max,Beta_dark,K_cG,j_ex_sat,j_cG_max,f_Ca,m_cG);
+end
+      
 %% Generate the mesh
 [pts,prisms,faces_sl,faces_fo,...
           n_pts,n_prism,n_fsl,n_ffo] = ...
@@ -296,8 +302,8 @@ J_tot = B_Ca*F*J_tot;
 
 %% Save the messenger system
 messenger = cell(7,1);
-messenger{1} = cG;
-messenger{2} = Ca;
+messenger{1} = NaN;%cG;
+messenger{2} = NaN;%Ca;
 messenger{3} = J_tot;
 messenger{4} = J_drop;
 messenger{5} = cG0;

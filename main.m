@@ -179,6 +179,7 @@ switch flag_job
     %% Global sensitivity analysis by Sobol indices
     case 'SA_Sbl'
         disp('prepr_Sbl should have been run already with trial folder here');
+        disp('If amin is not being varied, the alpha_min value of data_set should be the amin value in [0,1]');
         
         % Transfer remaining files into batch 
         copyfile ..\cyto\Cascade\*.m .\
@@ -194,17 +195,12 @@ switch flag_job
         % Transfer files back to main directory
         movefile .\*.mat ..\
         movefile ..\trial*mat ..\trials\
-        
+        movefile ..\jobid*mat ..\trials\
         
         % Delete the batch folder
         cd ..\
         delete batch\*
         rmdir batch\
-        
-        % Update OSC job status file
-        fileID = fopen('jobstat_osc.txt','w');
-        fprintf(fileID,'%d',n_complete);
-        fclose(fileID);
         
         % Clear the workspace
         clear all

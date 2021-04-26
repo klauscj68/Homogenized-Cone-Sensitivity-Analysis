@@ -8,6 +8,10 @@
 
 warning('off','MATLAB:table:ModifiedAndSavedVarnames');
 %% Load functionals and initialize
+% Declare whether to plot figures
+flag_plot = false;
+
+% Prepare sample matrices
 disp('SASbl_Evals.mat and trial_master.mat should be in this folder');
 load('trial_master.mat','id_free','n_frparam');
 load('Sbl_Evals.mat');
@@ -22,6 +26,13 @@ n_functionals = size(m1,1);
 n_trials = size(m1,2);
 
 flags = true(size(m1));
+%% Save RNG State
+rng('shuffle');
+RNgen0 = rng;
+    
+% Save the random number states in case of later replication
+save('RandNum.mat','RNgen0');
+
 %% Parameter Names
 param_names = ...
     {'Rb','Rt','H','cosgamma0','thetain','thetafin','eps0','nu','sig',...
@@ -55,11 +66,11 @@ for i=1:n_functionals
     if i < 12
         [F,G,H,K,...
         mu,sigma,arms,...
-        ntrials] = mc_plot(m1(i,flags(i,:)),100); %#ok<*ASGLU>
+        ntrials] = mc_plot(m1(i,flags(i,:)),100,flag_plot); %#ok<*ASGLU>
     else
         [F,G,H,K,...
         mu,sigma,arms,...
-        ntrials_chi] = mc_plot(m1(i,flags(i,:)),100,0); %#ok<*ASGLU>
+        ntrials_chi] = mc_plot(m1(i,flags(i,:)),100,flag_plot,0); %#ok<*ASGLU>
     end
     E.mcest1(i,1) = mu;
     E.mcvar1(i,1) = sigma;
@@ -69,10 +80,10 @@ for i=1:n_functionals
     
     if i < 12
         [F,G,H,K,...
-        mu,sigma,arms] = mc_plot(m2(i,flags(i,:)),100);
+        mu,sigma,arms] = mc_plot(m2(i,flags(i,:)),100,flag_plot);
     else
         [F,G,H,K,...
-        mu,sigma,arms] = mc_plot(m2(i,flags(i,:)),100,0);
+        mu,sigma,arms] = mc_plot(m2(i,flags(i,:)),100,flag_plot,0);
     end
     E.mcest2(i,1) = mu;
     E.mcvar2(i,1) = sigma;
@@ -82,8 +93,8 @@ for i=1:n_functionals
     
 end
 
-% Normalize the functionals to have mean 0
-shift = .5*(E.mcest1 + E.mcest2);
+% Shift functionals if wish to center mean
+shift = 0;
 m1 = m1-shift;
 m2 = m2-shift;
 for i=1:n_frparam
@@ -98,10 +109,10 @@ for i=1:n_functionals
     
     if i < 12
         [F,G,H,K,...
-        mu,sigma,arms] = mc_plot(V.sbl(i,flags(i,:)),100);
+        mu,sigma,arms] = mc_plot(V.sbl(i,flags(i,:)),100,flag_plot);
     else
         [F,G,H,K,...
-        mu,sigma,arms] = mc_plot(V.sbl(i,flags(i,:)),100,0);
+        mu,sigma,arms] = mc_plot(V.sbl(i,flags(i,:)),100,flag_plot,0);
     end
     
     V.mcest(i,1) = mu;
@@ -112,6 +123,14 @@ for i=1:n_functionals
 end
 V.sbl = [];
 
+% Display warning if V confidence interval is not stricly positive
+if nnz(V.mcest < 0) ~= 0 ||...
+      nnz(V.mcvar < 0) ~= 0 || ...
+      nnz(V.mcest - 2*V.mcvar/sqrt(ntrials) < 0)
+   warning(['More Monte Carlo trials are needed for strictly positive '...
+            'confidence intervals of variance. ' newline ...
+            'This may invalidate some confidence interval estimates']);
+end
 %% Process Di Indices
 for i=n_frparam:-1:1
     Di.sbl1 = m1.*(ai{i} - m2);
@@ -122,10 +141,10 @@ for i=n_frparam:-1:1
         
         if j < 12
             [F,G,H,K,...
-            mu,sigma,arms] = mc_plot(Di.sbl1(j,flags(j,:)),100);
+            mu,sigma,arms] = mc_plot(Di.sbl1(j,flags(j,:)),100,flag_plot);
         else
             [F,G,H,K,...
-            mu,sigma,arms] = mc_plot(Di.sbl1(j,flags(j,:)),100,0);
+            mu,sigma,arms] = mc_plot(Di.sbl1(j,flags(j,:)),100,flag_plot,0);
         end
         
         Di.mcest1(j,i) = mu;
@@ -137,10 +156,10 @@ for i=n_frparam:-1:1
     
         if j < 12
             [F,G,H,K,...
-            mu,sigma,arms] = mc_plot(Di.sbl2(j,flags(j,:)),100);
+            mu,sigma,arms] = mc_plot(Di.sbl2(j,flags(j,:)),100,flag_plot);
         else
             [F,G,H,K,...
-            mu,sigma,arms] = mc_plot(Di.sbl2(j,flags(j,:)),100,0);
+            mu,sigma,arms] = mc_plot(Di.sbl2(j,flags(j,:)),100,flag_plot,0);
         end
         
         Di.mcest2(j,i) = mu;
@@ -156,6 +175,12 @@ end
 Di.sbl1 = [];
 Di.sbl2 = [];
 
+if nnz(Di.mcvar1 < 0) ~=0 % Which Saltelli estimate
+    warning(['More Monte Carlo trials are needed for strictly positive '...
+            'variance estimate of Di. ' newline ...
+            'This may invalidate some confidence interval estimates']);
+end
+
 %% Process Dtoti Indices
 for i=n_frparam:-1:1
     Dtoti.sbl1 = .5*(m1 - ani{i}).^2;
@@ -167,10 +192,10 @@ for i=n_frparam:-1:1
         
         if j < 12
             [F,G,H,K,...
-            mu,sigma,arms] = mc_plot(Dtoti.sbl1(j,flags(j,:)),100);
+            mu,sigma,arms] = mc_plot(Dtoti.sbl1(j,flags(j,:)),100,flag_plot);
         else
             [F,G,H,K,...
-            mu,sigma,arms] = mc_plot(Dtoti.sbl1(j,flags(j,:)),100,0);
+            mu,sigma,arms] = mc_plot(Dtoti.sbl1(j,flags(j,:)),100,flag_plot,0);
         end
         
         Dtoti.mcest1(j,i) = mu;
@@ -181,10 +206,10 @@ for i=n_frparam:-1:1
     
         if j < 12
             [F,G,H,K,...
-            mu,sigma,arms] = mc_plot(Dtoti.sbl2(j,flags(j,:)),100);
+            mu,sigma,arms] = mc_plot(Dtoti.sbl2(j,flags(j,:)),100,flag_plot);
         else
             [F,G,H,K,...
-            mu,sigma,arms] = mc_plot(Dtoti.sbl2(j,flags(j,:)),100,0);
+            mu,sigma,arms] = mc_plot(Dtoti.sbl2(j,flags(j,:)),100,flag_plot,0);
         end
         
         Dtoti.mcest2(j,i) = mu;
@@ -198,6 +223,12 @@ for i=n_frparam:-1:1
 end
 Dtoti.sbl1 = [];
 Dtoti.sbl2 = [];
+
+if nnz(Dtoti.mcvar1 < 0) ~=0 % Which Saltelli estimate
+    warning(['More Monte Carlo trials are needed for strictly positive '...
+            'variance estimate of Dtoti. ' newline ...
+            'This may invalidate some confidence interval estimates']);
+end
 
 %% Process Dtotij Indices
 for i=n_frparam:-1:1
@@ -213,10 +244,10 @@ for i=n_frparam:-1:1
         
             if k < 12
                 [F,G,H,K,...
-                mu,sigma,arms] = mc_plot(Dtotij.sbl1(k,flags(k,:)),100);
+                mu,sigma,arms] = mc_plot(Dtotij.sbl1(k,flags(k,:)),100,flag_plot);
             else
                 [F,G,H,K,...
-                mu,sigma,arms] = mc_plot(Dtotij.sbl1(k,flags(k,:)),100,0);
+                mu,sigma,arms] = mc_plot(Dtotij.sbl1(k,flags(k,:)),100,flag_plot,0);
             end
             
             Dtotij.mcest1(k,i,j) = mu;
@@ -227,10 +258,10 @@ for i=n_frparam:-1:1
     
             if k < 12
                 [F,G,H,K,...
-                mu,sigma,arms] = mc_plot(Dtotij.sbl2(k,flags(k,:)),100);
+                mu,sigma,arms] = mc_plot(Dtotij.sbl2(k,flags(k,:)),100,flag_plot);
             else
                 [F,G,H,K,...
-                mu,sigma,arms] = mc_plot(Dtotij.sbl2(k,flags(k,:)),100,0);
+                mu,sigma,arms] = mc_plot(Dtotij.sbl2(k,flags(k,:)),100,flag_plot,0);
             end
             
             Dtotij.mcest2(k,i,j) = mu;
@@ -246,6 +277,12 @@ end
 Dtotij.sbl1 = [];
 Dtotij.sbl2 = [];
 
+if nnz(Dtotij.mcvar1 < 0) ~=0 % Which Saltelli estimate
+    warning(['More Monte Carlo trials are needed for strictly positive '...
+            'variance estimate of Dtotij. ' newline ...
+            'This may invalidate some confidence interval estimates']);
+end
+
 %% Process Dtotnij Indices
 for i=n_frparam:-1:1
     for j=i-1:-1:1
@@ -260,10 +297,10 @@ for i=n_frparam:-1:1
         
             if k < 12
                 [F,G,H,K,...
-                mu,sigma,arms] = mc_plot(Dtotnij.sbl1(k,flags(k,:)),100);
+                mu,sigma,arms] = mc_plot(Dtotnij.sbl1(k,flags(k,:)),100,flag_plot);
             else
                 [F,G,H,K,...
-                mu,sigma,arms] = mc_plot(Dtotnij.sbl1(k,flags(k,:)),100,0);
+                mu,sigma,arms] = mc_plot(Dtotnij.sbl1(k,flags(k,:)),100,flag_plot,0);
             end
             
             Dtotnij.mcest1(k,i,j) = mu;
@@ -274,10 +311,10 @@ for i=n_frparam:-1:1
     
             if k < 12
                 [F,G,H,K,...
-                mu,sigma,arms] = mc_plot(Dtotnij.sbl2(k,flags(k,:)),100);
+                mu,sigma,arms] = mc_plot(Dtotnij.sbl2(k,flags(k,:)),100,flag_plot);
             else
                 [F,G,H,K,...
-                mu,sigma,arms] = mc_plot(Dtotnij.sbl2(k,flags(k,:)),100,0);
+                mu,sigma,arms] = mc_plot(Dtotnij.sbl2(k,flags(k,:)),100,flag_plot,0);
             end
             
             Dtotnij.mcest2(k,i,j) = mu;
@@ -292,6 +329,12 @@ for i=n_frparam:-1:1
 end
 Dtotnij.sbl1 = [];
 Dtotnij.sbl2 = [];
+
+if nnz(Dtotnij.mcvar1 < 0) ~=0 % Which Saltelli estimate
+    warning(['More Monte Carlo trials are needed for strictly positive '...
+            'variance estimate of Dtotnij. ' newline ...
+            'This may invalidate some confidence interval estimates']);
+end
 
 %% Declare functional names for table
 ROWNAMES = {'Iact','Ipeak','Irec',...
@@ -340,7 +383,10 @@ header = [header '\n'];
 fprintf(fid,header);
 
 % Store Sobol indices
-ram = (Di.mcest1+2*Di.mcvar1/sqrt(ntrials))./(V.mcest-2*V.mcvar/sqrt(ntrials)); %Which Saltelli Estimate
+ram = max(... 
+          (Di.mcest1+2*Di.mcvar1/sqrt(ntrials))./(V.mcest-2*V.mcvar/sqrt(ntrials)),... %Which Saltelli Estimate
+          (Di.mcest1+2*Di.mcvar1/sqrt(ntrials))./(V.mcest+2*V.mcvar/sqrt(ntrials))... %Which Saltelli Estimate
+         );
 ledger = [];
 for i=1:length(ROWNAMES)
     ledger = [ROWNAMES{i}];
@@ -367,7 +413,10 @@ header = [header '\n'];
 fprintf(fid,header);
 
 % Store Sobol indices
-ram = (Di.mcest1-2*Di.mcvar1/sqrt(ntrials))./(V.mcest+2*V.mcvar/sqrt(ntrials)); %Which Saltelli Estimate
+ram = min(...
+          (Di.mcest1-2*Di.mcvar1/sqrt(ntrials))./(V.mcest+2*V.mcvar/sqrt(ntrials)),... %Which Saltelli Estimate
+          (Di.mcest1-2*Di.mcvar1/sqrt(ntrials))./(V.mcest-2*V.mcvar/sqrt(ntrials))... %Which Saltelli Estimate
+         ); 
 ledger = [];
 for i=1:length(ROWNAMES)
     ledger = [ROWNAMES{i}];
@@ -449,8 +498,12 @@ header = [header '\n'];
 fprintf(fid,header);
 
 % Store Sobol indices
-ram = (Dtoti.mcest1-2*Dtoti.mcvar1/sqrt(ntrials))./... %Which Saltelli Estimate
-       (V.mcest+2*V.mcvar/sqrt(ntrials));
+ram = min(...
+          (Dtoti.mcest1-2*Dtoti.mcvar1/sqrt(ntrials))./... %Which Saltelli Estimate
+           (V.mcest+2*V.mcvar/sqrt(ntrials)),...
+          (Dtoti.mcest1-2*Dtoti.mcvar1/sqrt(ntrials))./... %Which Saltelli Estimate
+           (V.mcest-2*V.mcvar/sqrt(ntrials))...
+         );
 ledger = [];
 for i=1:length(ROWNAMES)
     ledger = [ROWNAMES{i}];
@@ -633,8 +686,12 @@ header = [header '\n'];
 fprintf(fid,header);
 
 % Store Sobol indices
-ram = (Dtotij.mcest1 - 2*Dtotij.mcvar1/sqrt(ntrials))./... %Which Saltelli Estimate
-       (V.mcest + 2*V.mcvar/sqrt(ntrials));
+ram = min(...
+          (Dtotij.mcest1 - 2*Dtotij.mcvar1/sqrt(ntrials))./... %Which Saltelli Estimate
+           (V.mcest + 2*V.mcvar/sqrt(ntrials)),...
+          (Dtotij.mcest1 - 2*Dtotij.mcvar1/sqrt(ntrials))./... %Which Saltelli Estimate
+           (V.mcest - 2*V.mcvar/sqrt(ntrials))...
+          );
 ledger = []; %#ok<*NASGU>
 for k=1:length(ROWNAMES)
     ledger = [ROWNAMES{k}];
@@ -746,8 +803,12 @@ header = [header '\n'];
 fprintf(fid,header);
 
 % Store Sobol indices
-ram = 1-(Dtotnij.mcest1 - 2*Dtotnij.mcvar1/sqrt(ntrials))./... %Which Saltelli Estimate
-       (V.mcest + 2*V.mcvar/sqrt(ntrials));
+ram = 1-min(...
+            (Dtotnij.mcest1 - 2*Dtotnij.mcvar1/sqrt(ntrials))./... %Which Saltelli Estimate
+             (V.mcest + 2*V.mcvar/sqrt(ntrials)),...
+            (Dtotnij.mcest1 - 2*Dtotnij.mcvar1/sqrt(ntrials))./... %Which Saltelli Estimate
+             (V.mcest - 2*V.mcvar/sqrt(ntrials))...
+            );
 ledger = []; %#ok<*NASGU>
 for k=1:length(ROWNAMES)
     ledger = [ROWNAMES{k}];
@@ -843,8 +904,8 @@ fclose(fid);
 n_boxp = 8;
 
 % Define Caps for Box and Whisker Plots
-upcap = 1.25;
-lwcap = -.25;
+upcap = 1;
+lwcap = 0;
 %% Box Whisker Plot for Si
 % Extract the names of parameters whose sensitivities are measured
 fid = fopen('Si_upper.csv','r');
@@ -856,6 +917,7 @@ fclose(fid);
 % Load the ranges
 Tu = readtable('Si_upper.csv');
 Tl = readtable('Si_lower.csv');
+Tv = readtable('Si.csv');
 
 % Loop over functionals to create plots
 for i=1:n_functionals
@@ -865,11 +927,11 @@ for i=1:n_functionals
     % Setup the box intervals and param names
     box(2,:) = Tu{i,2:end};
     box(1,:) = Tl{i,2:end};
+    val      = Tv{i,2:end};
     
     names = varnames(2:end)';
     % Find the greatest quantities
-    boxavg = mean(box);
-    [~,flag_box] = maxk(boxavg,n_boxp);
+    [~,flag_box] = maxk(val,n_boxp);
     
     %  Cap them before extracting
     flag_cap = (box <= lwcap);
@@ -878,10 +940,11 @@ for i=1:n_functionals
     box(flag_cap) = upcap;
     
     box = box(:,flag_box);
+    val = val(flag_box);
     names = names(flag_box);
     
     % Make the plot
-    F = myboxplot(box,names);
+    F = myboxplot(val,box,names);
     
     title([ROWNAMES{i} ' Si indices: 90% Confidence']);
     ylabel('Confidence Intervals');
@@ -908,6 +971,7 @@ fclose(fid);
 % Load the ranges
 Tu = readtable('Stoti_upper.csv');
 Tl = readtable('Stoti_lower.csv');
+Tv = readtable('Stoti.csv');
 
 % Loop over functionals to create plots
 for i=1:n_functionals
@@ -917,11 +981,11 @@ for i=1:n_functionals
     % Setup the box intervals and param names
     box(2,:) = Tu{i,2:end};
     box(1,:) = Tl{i,2:end};
+    val      = Tv{i,2:end};
     
     names = varnames(2:end)';
     % Find the greatest quantities
-    boxavg = mean(box);
-    [~,flag_box] = maxk(boxavg,n_boxp);
+    [~,flag_box] = maxk(val,n_boxp);
     
     % Cap them
     flag_cap = (box <= lwcap);
@@ -930,10 +994,11 @@ for i=1:n_functionals
     box(flag_cap) = upcap;
     
     box = box(:,flag_box);
+    val = val(flag_box);
     names = names(flag_box);
     
     % Make the plot
-    F = myboxplot(box,names);
+    F = myboxplot(val,box,names);
     
     title([ROWNAMES{i} ' Stoti indices: 90% Confidence']);
     ylabel('Confidence Intervals');
@@ -960,6 +1025,7 @@ fclose(fid);
 % Load the ranges
 Tu = readtable('Stotij_upper.csv');
 Tl = readtable('Stotij_lower.csv');
+Tv = readtable('Stotij.csv');
 
 % Loop over functionals to create plots
 for i=1:n_functionals
@@ -969,11 +1035,11 @@ for i=1:n_functionals
     % Setup the box intervals and param names
     box(2,:) = Tu{i,2:end};
     box(1,:) = Tl{i,2:end};
+    val      = Tv{i,2:end};
     
     names = varnames(2:end)';
     % Find the greatest quantities
-    boxavg = mean(box);
-    [~,flag_box] = maxk(boxavg,n_boxp);
+    [~,flag_box] = maxk(val,n_boxp);
     
     %  Cap them before extracting
     flag_cap = (box <= lwcap);
@@ -982,10 +1048,11 @@ for i=1:n_functionals
     box(flag_cap) = upcap;
     
     box = box(:,flag_box);
+    val = val(flag_box);
     names = names(flag_box);
     
     % Make the plot
-    F = myboxplot(box,names);
+    F = myboxplot(val,box,names);
     
     title([ROWNAMES{i} ' Stotij indices: 90% Confidence']);
     ylabel('Confidence Intervals');
@@ -1012,6 +1079,7 @@ fclose(fid);
 % Load the ranges
 Tu = readtable('Sij_upper.csv');
 Tl = readtable('Sij_lower.csv');
+Tv = readtable('Sij.csv');
 
 % Loop over functionals to create plots
 for i=1:n_functionals
@@ -1021,11 +1089,11 @@ for i=1:n_functionals
     % Setup the box intervals and param names
     box(2,:) = Tu{i,2:end};
     box(1,:) = Tl{i,2:end};
+    val      = Tv{i,2:end};
     
     names = varnames(2:end)';
     % Find the least quantities
-    boxavg = mean(box);
-    [~,flag_box] = maxk(boxavg,n_boxp);
+    [~,flag_box] = maxk(val,n_boxp);
     
     % Cap them
     flag_cap = (box <= lwcap);
@@ -1034,10 +1102,11 @@ for i=1:n_functionals
     box(flag_cap) = upcap;
     
     box = box(:,flag_box);
+    val = val(flag_box);
     names = names(flag_box);
     
     % Make the plot
-    F = myboxplot(box,names);
+    F = myboxplot(val,box,names);
     
     title([ROWNAMES{i} ' Sij indices: 90% Confidence']);
     ylabel('Confidence Intervals');

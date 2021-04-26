@@ -15,7 +15,7 @@ function [smp,prange,threshold,p,gamma]...
 
 %% Proposal kernel parameters
 % Fitscore threshold above which we may draw a uniform sample
-threshold = 36;
+threshold = Inf;
 
 % Probability of drawing uniform sample if above threshold
 %  1/p is mean of geometric distribution
@@ -106,7 +106,7 @@ prange(B+1:B+2,:) = [...
 % R_st biochemistry
 B = pointer(6);
 prange(B+1:B+4,:) = [...
-                     30 40;... % nu_RG
+                     30 330;... % nu_RG
                      1 2; ... % D_R_st
                      1 200; ... % k_R
                      99.5e3 100.5e3; ... R_sigma
@@ -125,7 +125,7 @@ B = pointer(8);
 prange(B+1:B+6,:) = [...
                      .8 1.6; ... % D_E_st
                      5 150; ... % k_E (Majumder15 -> 2.3xShen )
-                     10 120; ... % PDE_sigma
+                     10 100; ... % PDE_sigma
                      1 1e3; ... % Beta_dark
                      10e-6 10e-6; ... % K_m
                      8.3e-6 8.3e-6; ... % k_st
@@ -159,9 +159,9 @@ prange(B+1:B+2,:) = [...
 B = pointer(12);
 prange(B+1:B+4,:) = [...
                      1000e-12 5000e-12; ... % j_cg_max
-                     2.25 2.75; ... % m_cG
+                     2.5 3.5; ... % m_cG
                      10 30; ... % K_cG
-                     .31 .35; ... % f_Ca
+                     .2 .35; ... % f_Ca
                     ];
                 
 % Exchanger current

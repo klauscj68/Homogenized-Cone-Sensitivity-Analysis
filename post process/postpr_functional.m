@@ -27,19 +27,13 @@ Ipts = J_tot(1) - J_tot(logind);
                              
 
 % Find best fitting (1/2)A_I t^2 quadratic
-A = bestfit(tpts,Ipts,'quad');
+A = bestfit(tpts,real(Ipts),'quad');
 
 % Store
 functionals(1) = A;
 
 %% Ipeak
-peak = max(J_drop);
-
-if peak < 0
-    peak = 0;
-elseif peak > 100
-    peak = 100;
-end
+peak = max(J_drop)/100;
 
 % Store
 functionals(2) = peak;
@@ -51,6 +45,7 @@ logind = logical(...
 tpts = taxis(logind);
 Ipts = J_tot(1) - J_tot(logind);
 
+%{
 % If there was overshoot then rising response, restrict to part of curve
 %   strictly before the minimum and have the minimum be the 0 value. 
 %   Note: Is a boundary case where minimum is at end but curve still
@@ -77,7 +72,8 @@ catch ME
     disp(ME.identifier);
     functionals(3) = NaN;
 end
-
+%}
+functionals(3) = NaN;
 
 %% Estact
 %   Find the points in the activation phase
@@ -95,10 +91,6 @@ functionals(4) = A;
 
 %% Estpeak 
 Epeak = max(mass_Evol);
-
-if Epeak > 2500
-    Epeak = 2500;
-end
 
 % Store
 functionals(5) = Epeak;
@@ -178,22 +170,15 @@ switch flag_proceed
                          sum(...
                              (flashpts - simpts).^2 ...
                             )...
+                            /length(simpts)...
                      );
     case false
         functionals(7) = NaN;
 end
 
-if functionals(7) > 1e3
-    functionals(7) = 1e3;
-end
-
 %% Tpeak for J_tot
 [~,tpeak] = max(J_drop);
 tpeak = taxis(tpeak);
-
-if tpeak > 0.25
-    tpeak = 0.25;
-end
 
 % Store 
 functionals(8) = tpeak;
@@ -220,35 +205,25 @@ functionals(9) = delta;
 %% Jdark
 jd = J_tot(1)*1e12; % Convert A to pA
 
-if jd < 0
-    jd = 0;
-elseif jd > 48
-    jd = 48;
-end
-
 % Store
 functionals(10) = jd;
 
 %% Overshoot of Jdrop
 jover = abs(min(min(J_drop),0));
 
-if jover > 6.5
-    jover = 6.5;
-end
-
 % Store
 functionals(11) = jover*flag_over;
 
 %% Indicator Ipeak
-thresh = 13.3; % pA (one-half saturating value in exp)
+thresh = 0.5;
 peak = functionals(2);
 
 functionals(12) = (peak >= thresh);
 
 %% Indicator L2 Fit
-% Check that jdark is within 10% and the average DROP error is within 
+% Check that jdark is within 25% and the average DROP error is within 
 %   thresh compared to Ingram et al
-thresh = .5;
+thresh = .25;
 jd = functionals(10);
 
 % Do the calculation assuming simpts etc are defined
@@ -267,7 +242,7 @@ try
                       /length(simdrop)...
                   );
     
-    functionals(13) = (errdrop <= thresh)&(jd >= .9*26.6)&(jd <= 1.1*26.6);
+    functionals(13) = (errdrop <= thresh)&(jd >= .75*26.6)&(jd <= 1.25*26.6);
     
 catch
     functionals(13) = NaN;

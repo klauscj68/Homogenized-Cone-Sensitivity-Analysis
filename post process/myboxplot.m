@@ -1,5 +1,6 @@
-function [F] = myboxplot(boxes,names)
+function [F] = myboxplot(val,boxes,names)
 %Make boxplots of the given intervals
+%   val is the estimated Sobol index
 %   boxes is a 2 x n_box array that lists start and endpoints for each
 %    interval
 %   names is a 1 x n_box string cell that stores the names for the boxes
@@ -19,9 +20,9 @@ textshift = .05*(...
 %% Plot the boxes
 for i=1:n_box
     plot([i;i],boxes(:,i),'b','LineWidth',4,'Tag','Box');
-    plot(i,mean(boxes(:,i)),'ko','MarkerSize',9,'MarkerFaceColor','w',...
+    plot(i,val(i),'ko','MarkerSize',9,'MarkerFaceColor','w',...
                             'Tag','Middle_Circle');
-    plot(i,mean(boxes(:,i)),'b.','MarkerSize',3,'MarkerFaceColor','b',...
+    plot(i,val(i),'b.','MarkerSize',3,'MarkerFaceColor','b',...
                             'Tag','Middle_Dot');
     plot(i+whisker_length*[-1;1],repmat(boxes(1,i),2,1),'b','LineWidth',2,...
                             'Tag','Lower_Whisker');

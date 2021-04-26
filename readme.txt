@@ -1,11 +1,9 @@
 This repository contains the code needed to perform our finite element and Sobol sensitivity analysis for cone photoreceptors in bright light. 
 
-v1.0 DOI:10.5281/zenodo.4666495
-
 We highlight the following for making use of the code as in our paper.
 
 1.) main.m
-This is the main driver script for most of the modeling tasks. These include: the activation signaling cascade on discs (Act), the conversion of E* as a surface quantity to a volumic one (Evol), the 2nd messenger diffusion of cGMP and Ca2+ in the cytosol. To run basic flash simulations, these three cases should be run in sequence. In addition to these basic cases, main.m can also perform several sensitivity and fitting tasks: gradient based local sensitivity about a choice of parameters (SA_pd), Monte Carlo simulation for Sobol, and the MCMC fitting of experimental flash responses (RanW). For Sobol analysis, supercomputing resources were required for adequate numbers of simulation for Monte Carlo and processing.
+This is the main driver script for most of the modeling tasks. These include: the activation signaling cascade on discs (Act), the conversion of E* as a surface quantity to a volumic one (Evol), the 2nd messenger diffusion of cGMP and Ca2+ in the cytosol (Msg). To run basic flash simulations, these three cases should be run in sequence. In addition to these basic cases, main.m can also perform several sensitivity and fitting tasks: gradient based local sensitivity about a choice of parameters (SA_pd), Monte Carlo simulation for Sobol (SA_Sbl), and the MCMC fitting of experimental flash responses (RanW). For Sobol analysis, supercomputing resources were required for adequate numbers of simulation for Monte Carlo and processing.
 
 2.) 'common/data_set.m'
 This is where model parameters for basic photoreceptor simulations are specified. For fitting and sensitivity analysis, parameters that are not varied are taken from this file. 
@@ -20,4 +18,4 @@ This script is where uniform ranges for parameters, to be used in Sobol analysis
 This script should be run before running main.m with the Sobol option to prepare the random parameter samples which will be used in Monte Carlo simulation
 
 6.) 'post process/postpr_SASbleval.m,postpr_SASbl.m'
-The first script should be run immediately after main.m has concluded to generate output required to run next the second script.  The second script generates Sobol csv files and figures. Whether to plot QQ-plots as well may be done by setting flag_plot in 'post process/mc_plot.m'. These scripts require that the files Sbl_Evals.mat and trial_master.mat both be in the post process folder before running.  These files may be downloaded from this paper's associated Dryad repository.
+The first script should be run immediately after main.m has concluded Sobol analysis to generate output required to run next the second script.  The second script generates Sobol csv files. These scripts require that the files Sbl_Evals.mat and trial_master.mat both be in the post process folder before running.  These files may be downloaded from this paper's associated Dryad repository.

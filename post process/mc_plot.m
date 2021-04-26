@@ -1,6 +1,6 @@
 function [F,G,H,K,...
           mu,sigma,arms,...
-          nqty] = mc_plot(qty,n_smp,threshold)
+          nqty] = mc_plot(qty,n_smp,flag_plot,threshold)
 %Generate an empirical plot of sample avg of qty evidencing MC convergence
 %   qty is a 1 x n_trials vector recording the value of integrand in each
 %    trial
@@ -15,13 +15,11 @@ function [F,G,H,K,...
 %   arms stands for average root mean square error for the qq plot between
 %    sample values and the line y = x
 %   nqty is the number of elements in qty taken as convergent
-%% Declare whether generating figures
-flag_plot = false;
 
 %% Optionally exclude identified nonconvergent runs (default is dont)
 thresh = 0; % units of percent
 % Override if thresh value was passed
-if nargin == 3
+if nargin == 4
     thresh = threshold;
 end
 rawqty = qty;
@@ -133,8 +131,20 @@ else
 end
 
 %% Q-Q Plot
+qty = qty(:);
+nqty = length(qty);
+
+% Take 1000 bootstrap samples of averages w/ as many terms as MC trial
+bootstrap = qty(randi(nqty,nqty,1000));
+bootstrap = mean(bootstrap,1);
+
+% Normalize to mean 0 and std 1
+%  Since sampled from empirical distr with mean, std (mu,sigma)
+%   bootstrap averages have distr (mu,sigma/sqrt(nqty))
+Nsmp_means = (bootstrap - mu)/(sigma/sqrt(nqty));
+
 % Compare the sample means with a N(0,1) normal distribution to evidence
-%  convergence
+%  convergence.
 Nsmp_means_ord = unique(Nsmp_means);
 
 for i=length(Nsmp_means_ord):-1:1
@@ -161,9 +171,10 @@ if flag_plot
     H.CurrentAxes.TitleFontSizeMultiplier = 1.25;
     xlabel(['Empirical CDF: arms =' num2str(arms,4)]);
     ylabel('Standard Normal CDF');
-    title('Q-Q Plot of Sample Means')
+    title('Q-Q Plot of Bootstrap Means')
 else
     H = NaN;
 end
+
 end
 

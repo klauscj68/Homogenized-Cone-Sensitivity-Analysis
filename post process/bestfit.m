@@ -40,7 +40,7 @@ switch flag_model
         % Check if y-values are all positive
         check = sum(y <= 0);
         if check ~= 0
-            disp('You are trying to fit an exponential to nonpositives. Performing shift.')
+            %disp('You are trying to fit an exponential to nonpositives. Performing shift.')
             
             % Shift data by least value
             y = y - (1.0001)*min(y);

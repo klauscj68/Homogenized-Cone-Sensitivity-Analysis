@@ -197,7 +197,7 @@ Crange(B+1:B+2,:) = [...
 B = pointer(12);
 Crange(B+1:B+4,:) = [...
                      1000e-12 5000e-12; ... % j_cg_max
-                     2 3; ... % m_cG
+                     2 3.5; ... % m_cG
                      10 30; ...%26 504; ... % K_cG (Haynes Yau 1990 44uM)
                      .2 .35;...%.28 .4; ... % f_Ca (Ohyama .34+-.06 range)
                     ];

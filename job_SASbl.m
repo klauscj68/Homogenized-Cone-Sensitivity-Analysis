@@ -2,8 +2,7 @@
 %% Initialize
 assert(isfile('trial_master.mat'),...
        'master.mat file must be in directory');
-load('trial_master.mat','n_trials','trials_id',...
-     'flag_params','n_params','id_free','n_frparam');
+load('trial_master.mat');
 
 
 %% Generate a datamat and pointer
@@ -12,196 +11,119 @@ load('trial_master.mat','n_trials','trials_id',...
 
 %% Submit the jobs in parallel
 % For counting progress rate at start of simulation
-last = 0;
-n_complete = 0;
-
 clock = 0:10:100;
 pos = 1;
 
-% Track the shift for trial id's
-shift = trials_id(1)-1;
-
-%% Submit M1
-for k=n_trials:-1:1
-    fname = ['trial_M1_col' num2str(shift+k) '.mat'];
-    
-    % If file isn't in directory or if it has already been completed cycle
-    %  to next value
+%% Find worker's load
+for i=1:nbatch
+    fname = ['jobid_batch' num2str(i) '.mat'];
     if ~isfile(fname)
         continue
-    end
-    
-    load(fname);
-    if flag_done
-        n_complete = n_complete+1;
-        continue
-    end
-    
-    % Run job
-    [wk_act,wk_Evol,wk_msg] = par_trial(datamat,pointer,0,0);     %#ok<UNRCH>
-                             
-    % Save the result in its mat file
-    
-    %  Give vars their proper names
-    %   Note: job_SApd script has more complete identity list
-    taxis   = wk_act{4};
-    
-    mass_Evol = wk_Evol{3};
-    
-    J_tot = wk_msg{3};
-    J_drop = wk_msg{4};
-    cG0 = wk_msg{5};
-    Ca0 = wk_msg{6};
-    
-    % Append the variables to the file
-    flag_done = true;
-    save(fname,...
-         'taxis','mass_Evol','J_tot','J_drop','cG0','Ca0','flag_done',...
-         '-append');
-    if (k/n_trials*100 >= clock(pos+1))
-        pos = pos+1;
-        disp(['M1 at ' num2str(clock(pos)) '%'])
-    end
-     
-end
-
-%% Submit M2
-pos = 1;
-for k=n_trials:-1:1
-    fname = ['trial_M2_col' num2str(shift+k) '.mat'];
-    
-    % If file isn't in directory or if it has already been completed cycle
-    %  to next value
-    if ~isfile(fname)
-        continue
-    end
-    
-    load(fname);
-    if flag_done
-        n_complete = n_complete+1;
-        continue
-    end
-    
-    % Run job
-    [wk_act,wk_Evol,wk_msg] = par_trial(datamat,pointer,0,0);    
-                             
-    % Save the result in its mat file
-    
-    %  Give vars their proper names
-    %   Note: job_SApd script has more complete identity list
-    taxis   = wk_act{4};
-    
-    mass_Evol = wk_Evol{3};
-    
-    J_tot = wk_msg{3};
-    J_drop = wk_msg{4};
-    cG0 = wk_msg{5};
-    Ca0 = wk_msg{6};
-    
-    % Append the variables to the file
-    flag_done = true;
-    save(fname,...
-         'taxis','mass_Evol','J_tot','J_drop','cG0','Ca0','flag_done',...
-         '-append');
-     
-     if (k/n_trials*100 >= clock(pos+1))
-        pos = pos+1;
-        disp(['M2 at ' num2str(clock(pos)) '%'])
-    end
-                   
-end
-
-%% Submit Ai
-for i=1:n_frparam
-    pos = 1;
-    for k = n_trials:-1:1
-        fname = ['trial_A' num2str(i) '_col' num2str(shift+k) '.mat'];
-    
-        % If file isn't in directory or if it has already been completed 
-        %  cycle to next value
-        if ~isfile(fname)
-            continue
-        end
-    
+    else
         load(fname);
-        if flag_done
-            n_complete = n_complete+1;
-            continue
-        end
-    
-       % Run job
-        [wk_act,wk_Evol,wk_msg] = par_trial(datamat,pointer,0,0);   
-                             
-        % Save the result in its mat file
-    
-        %  Give vars their proper names
-        %   Note: job_SApd script has more complete identity list
-        taxis   = wk_act{4};
-    
-        mass_Evol = wk_Evol{3};
-    
-        J_tot = wk_msg{3};
-        J_drop = wk_msg{4};
-        cG0 = wk_msg{5};
-        Ca0 = wk_msg{6};
-    
-        % Append the variables to the file
-        flag_done = true;
-        save(fname,...
-             'taxis','mass_Evol','J_tot','J_drop','cG0','Ca0','flag_done',...
-             '-append');
-   
-        if (k/n_trials*100 >= clock(pos+1))
-            pos = pos+1;
-            disp(['A' num2str(i) ' at ' num2str(clock(pos)) '%'])
-        end
-     end
-end
+        
+        % Loop over mats this worker responsible for
+        for k=1:length(jobid)
+            j = jobid(k);
+            % jobids meaning
+            %  +1-n_frparam means Ai{i}
+            %  -1-n_frparam means Ani{i}
+            %  +Inf means M1
+            %  -Inf means M2
+            %  NaN means a placeholder that will be skipped
+            if isnan(j)||flag_done(k)
+                continue
+            elseif j == Inf
+                ram = M1;
+            elseif j == -Inf
+                ram = M2;
+            elseif j > 0
+                ram = Ai{j};
+            elseif j < 0
+                ram = Ani{-j};
+            else
+                error('jobids index was not correct');
+            end
+            
+            % Loop over columns of this mat
+            if isempty(flag_colpos{k})
+                wkcols = 1:n_trials;
+                flag_colpos{k} = false(n_trials,1);
+            else
+                wkcols = 1:n_trials;
+                wkcols(flag_colpos{k}) = [];
+            end
+            
+            ncols = length(wkcols);
+            % Organize wkcols into small parallel batch sizes for memory
+            nloads = 300;
+            nrdcols = ceil(ncols/nloads)*nloads;
+            wkbatch = [wkcols NaN(1,nrdcols - ncols)];
+            wkbatch = reshape(wkbatch,nloads,nrdcols/nloads);
+            for l=wkbatch
+                for m=nnz(~isnan(l)):-1:1
+                % Submit each job in parallel
+                Par_Run(m) = parfeval(@par_trial,3,...
+                                      ram(:,l(m)),pointer,NaN,0);
+                end
+                
+                for m=1:nnz(~isnan(l))
+                    % Fetch jobs and save partial progress
+                    [idm,wk_act,wk_Evol,wk_msg] = fetchNext(Par_Run);
+                
+                    %  Note: job_SApd script has more complete identity list
+                    nupt = length(wk_act{4});
+		    ndwnpt = ceil(nupt/2);
 
-%% Submit Ani
+		    dwntaxis = [wk_act{4} NaN(1,2*ndwnpt-nupt)];
+		    dwntaxis = reshape(dwntaxis,2,ndwnpt);
+		    dwntaxis = dwntaxis(1,:);
+		    Results.taxis   = dwntaxis;
+                    
+		    dwnEvol = [wk_Evol{3} NaN(1,2*ndwnpt-nupt)];
+		    dwnEvol = reshape(dwnEvol,2,ndwnpt);
+		    dwnEvol = dwnEvol(1,:);
+		    Results.mass_Evol   = dwnEvol;
 
-for i=1:n_frparam
-    pos = 1;
-    for k = n_trials:-1:1
-        fname = ['trial_An' num2str(i) '_col' num2str(shift+k) '.mat'];
-    
-        % If file isn't in directory or if it has already been completed 
-        %  cycle to next value
-        if ~isfile(fname)
-            continue
+		    dwnJtot = [wk_msg{3} NaN(1,2*ndwnpt-nupt)];
+		    dwnJtot = reshape(dwnJtot,2,ndwnpt);
+		    dwnJtot = dwnJtot(1,:);
+		    Results.J_tot = dwnJtot;
+
+		    dwnJdrop = [wk_msg{4} NaN(1,2*ndwnpt-nupt)];
+		    dwnJdrop = reshape(dwnJdrop,2,ndwnpt);
+		    dwnJdrop = dwnJdrop(1,:);
+		    Results.J_drop = dwnJdrop;
+		    
+                    Results.cG0 = wk_msg{5};
+                    Results.Ca0 = wk_msg{6};
+                
+                    Sbl_results{k}{wkcols(l(idm))} = Results;
+                    flag_colpos{k}(wkcols(l(idm))) = true;
+                
+                    if (pos < length(clock))&&(l(idm)/n_trials*100 >= clock(pos+1))
+                        save(['jobid_batch' num2str(i)],...
+                            'flag_colpos','Sbl_results','-append');
+                        disp(['Job batch ' 'file ' num2str(i) ': ' num2str(k)...
+                            '/' num2str(length(jobid)) ' at ' ...
+                           num2str(clock(pos+1)) '%'])
+                    while (pos < length(clock))&&...
+                           (l(idm)/n_trials*100 >= clock(pos+1))
+                        pos = pos + 1;
+                    end
+                    end
+                end 
+            end
+            % Finished this mat
+            flag_done(k) = true;
+            save(['jobid_batch' num2str(i)],...
+                  'flag_colpos','Sbl_results','flag_done',...
+                  '-append');
+            disp(['Job batch ' 'file ' num2str(i) ': ' num2str(k)...
+                  '/' num2str(length(jobid)) ' at ' ...
+                  '100%'])
+              
+            pos = 1;
         end
-    
-        load(fname);
-        if flag_done
-            n_complete = n_complete+1;
-            continue
-        end
-    
-        % Run job
-        [wk_act,wk_Evol,wk_msg] = par_trial(datamat,pointer,0,0);
-                             
-        % Save the result in its mat file
-    
-        %  Give vars their proper names
-        %   Note: job_SApd script has more complete identity list
-        taxis   = wk_act{4};
-    
-        mass_Evol = wk_Evol{3};
-    
-        J_tot = wk_msg{3};
-        J_drop = wk_msg{4};
-        cG0 = wk_msg{5};
-        Ca0 = wk_msg{6};
-    
-        % Append the variables to the file
-        flag_done = true;
-        save(fname,...
-            'taxis','mass_Evol','J_tot','J_drop','cG0','Ca0','flag_done',...
-            '-append');
-   
-        if (k/n_trials*100 >= clock(pos+1))
-            pos = pos+1;
-            disp(['An' num2str(i) ' at ' num2str(clock(pos)) '%'])
-        end
-     end
+    end
 end

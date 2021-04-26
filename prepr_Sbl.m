@@ -13,7 +13,10 @@ disp(['Note: Distributions are defined solely in mc_sample_Sbl.m'...
 
 %% Initialize
 % Range of trials being performed
-trials_id = [1 10e3];
+trials_id = [1 50e3];
+
+% How many batch submissions to split across
+nbatch = 68;
 
 %% Setup batch directory
 mkdir batch
@@ -35,16 +38,9 @@ copyfile ..\job_SASbl.m .\
 %% Specify subset of params whose variation is measured
 % RECALL: alpha_min is normalized to independent [0,1] according to max
 %         value permitted by other model parameters for dark steady state.
-%         This ensures a parameter set of truly independent rv's so that
-%         any arbitrarily chosen set may be varied.  Implicit in this
-%         assumption is that all variables are uniform over their
-%         intervals, since then the conditional probability of alpha_min
-%         with respect to other vars is the joint density (unif) over
-%         marginal (constant in alpha_min), hence is again uniform and so
-%         is that induced by Z uniform on [0,1] times the Amax value of
-%         mc_sample (which is the upper limit to permissible values of
+%         (which is the upper limit to permissible values of
 %         alpha_min for existence of steady state assuming j_ex_sat and
-%         f_Ca/2*j_cG_max are separated)
+%         f_Ca/2*j_cG_max are separated and bounded also by alpha_max)
 
 flag_params = false(max(size(datamat)),1);
 n_params = length(flag_params);
@@ -91,7 +87,7 @@ flag_params(pos+1:pos+2) = true; % j_ex_sat,K_ex
 
 % Cyclase biochemistry
 pos = pointer(14);
-flag_params(pos+1:pos+4) = true; % alpha_max,alpha_min,m_cyc,K_cyc
+flag_params(pos+1:pos+4) = true; % alpha_max,amin,m_cyc,K_cyc
 
 % Free parameters
 id_free = find(flag_params);
@@ -119,7 +115,6 @@ end
 
 %% Generate M1,M2 sample matrices
 n_trials = trials_id(2) - (trials_id(1) - 1);
-shift = trials_id(1) - 1;
 
 % Build M1
 k = n_trials;
@@ -167,7 +162,7 @@ while k >= 1
            ['The alpha_min reparameterization didnt lead to solvable '...
             'steady state']);
         
-    % Write into M1
+    % Write into M2
     M2(:,k) = smp; %#ok<SAGROW>
                      
     % Update counter
@@ -183,73 +178,69 @@ close(WBar);
 RNgen = rng;
 save('RandNum.mat','RNgen','-append');
 
-%% Generate the trial mat files for sensitivity analysis like Satelli02
+%% Generate resampled matrices for sensitivity analysis like Satelli02
 
-% Columns of M1
-WBar = waitbar(0,'Columns of M1');
-for i=1:n_trials
-    waitbar(i/n_trials,WBar);
-    datamat = M1(:,i);
-    flag_done = false;
-    save(['trial_M1_col' num2str(shift+i) '.mat'],...
-          'datamat','pointer','flag_done','-v7.3');
-end
-close(WBar);
-
-% Columns of M2
-WBar = waitbar(0,'Columns of M2');
-for i=1:n_trials
-    waitbar(i/n_trials,WBar);
-    datamat = M2(:,i);
-    flag_done = false;
-    save(['trial_M2_col' num2str(shift+i) '.mat'],...
-          'datamat','pointer','flag_done','-v7.3');
-end
-close(WBar);
-
-% Columns of Ai
+% Build Ai
+Ai = cell(n_frparam,1);
 WBar = waitbar(0,'Cycling through Ai');
 for i=1:n_frparam
     waitbar(i/n_frparam);
-    % Build Ai
-    ram = M2;
-    ram(id_free(i),:) = M1(id_free(i),:);
-    
-    % Generate columns of Ai
-    for j=1:n_trials
-        datamat = ram(:,j);
-        flag_done = false;
-        save(['trial_A' num2str(i) '_col' num2str(shift+j) '.mat'],...
-              'datamat','pointer','flag_done','-v7.3');
-    end
-    
+    % Substitute row of M1 into M2
+    Ai{i} = sbl_dep(M2,M1,pointer,id_free(i));
 end
 close(WBar)
 
-% Columns of Ani
+% Build Ani
+Ani = cell(n_frparam,1);
 WBar = waitbar(0,'Cycling through Ani');
 for i=1:n_frparam
-    % Build Ani
     waitbar(i/n_frparam);
-    ram = M1;
-    ram(id_free(i),:) = M2(id_free(i),:);
-    
-    % Generate columns of Ani
-    for j=1:n_trials
-        datamat = ram(:,j);
-        flag_done = false;
-        save(['trial_An' num2str(i) '_col' num2str(shift+j) '.mat'],...
-              'datamat','pointer','flag_done','-v7.3');
-    end
-    
+    % Substitute row of M2 into M1
+    Ani{i} = sbl_dep(M1,M2,pointer,id_free(i));
 end
 close(WBar)
+
+%% Split total load across desired batch submissions
+% Total number of sample matrices
+nmat = 2*n_frparam + 2;
+
+% Tally for an even balance of load
+nceil = ceil(nmat/nbatch)*nbatch;
+nfill = nceil - nmat;
+
+% Create jobids
+%  +1-n_frparam means Ai{i}
+%  -1-n_frparam means Ani{i}
+%  +Inf means M1
+%  -Inf means M2
+%  NaN means a placeholder that will be skipped
+%  
+%  Each row is a batch of indices for a worker to run its job
+jobids = [1:n_frparam -(1:n_frparam) Inf -Inf NaN(1,nfill)];
+ram = reshape(jobids,nbatch,nceil/nbatch);
+
+% Used in Sobol restarts to mark partial progress through full mats and
+% through columns of a mat and to store the results of MC samples
+flag_done = false(size(ram,2),1);
+flag_colpos = cell(size(ram,2),1);
+Sbl_results = cell(size(ram,2),1);
+
+
+% Save batch load
+for i=1:nbatch
+    jobid = ram(i,:);
+    Sbl_results{i} = cell(length(jobid),1);
+    save(['jobid_batch' num2str(i)],'jobid','datamat','pointer',...
+          'flag_done','flag_colpos','Sbl_results');
+end
 
 %% Save master data set
 % Save master copy of M1,M2
 save('trial_master.mat',...
-     'M1','M2','n_trials','trials_id',...
+     'M1','M2','Ai','Ani',...
+     'n_trials','trials_id',...
      'flag_params','n_params','id_free','n_frparam',...
+     'nbatch',...
      '-v7.3');
  
 clear all %#ok<CLALL>
@@ -258,6 +249,7 @@ clear all %#ok<CLALL>
 cd ..\
 mkdir trials
 movefile batch\trial*mat trials\ 
+movefile batch\jobid*mat trials\ 
 movefile batch\RandNum.mat .\
 delete batch\*
 rmdir batch\

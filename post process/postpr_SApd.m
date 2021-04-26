@@ -7,7 +7,7 @@
 %  to match the job_SApd section Setup parfeval var factor
 %% Define the time intervals used for measuring activation and recovery
 tact = [0 .01];
-trec = [.15 .5];
+trec = [.135 .5];
 
 %% Define path for auxilliary files
 oldpath = addpath('..\common\');
@@ -37,7 +37,7 @@ load('cyto_0.mat')
 fct0 = postpr_functional(tact,trec,taxis,...
                          J_tot,J_drop,...
                          mass_Evol,...
-                         datamat,pointer);
+                         datamat,pointer,true);
 
 %% Compute the functional values for all the parameter variations
 % Functional value array
@@ -56,7 +56,7 @@ for k=1:2*n_params
         fct = postpr_functional(tact,trec,taxis,...
                          J_tot,J_drop,...
                          mass_Evol,...
-                         smp,pointer);
+                         smp,pointer,true);
                      
         % Store it in the array
         FCT(:,i+(j-1)*n_data) = fct;
@@ -89,7 +89,7 @@ PD = ([-prmtstep prmtstep].*(FCT - fct0));
 
 %  Average forward and backwards difference quotients
 %   Avg encodes the weights used on resp bdiff and fdiff
-Avg = [1 0];
+Avg = [0 1];
 PD = Avg(1)*PD(:,1:n_params) + Avg(2)*PD(:,n_params + (1:n_params));
 
 % Normalize for relative sensitivity: (dy/dx)/(y/x)
